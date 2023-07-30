@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>暮光資城</title>
+    <link href="./index/index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Yuji+Boku&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body>
+    <div class="showcase" tabindex="0">
+        <video id="computer" src="./index/indexmaterial/background/bg_computer.mp4" autoplay loop muted></video>
+        <video id="phone" src="./index/indexmaterial/background/bg_phone.mp4" autoplay loop muted></video>
+        <!-- <img id="player" src="./indexmaterial/player/right.gif" alt=""> -->
+        <div class="butcase">
+            <div class="butup">
+                <div class="text">
+                    <!-- <h1>Welcome</h1> -->
+                    <h1 class="cssanimation effect3d leFadeInTop">
+                        <span>暮</span>
+                        <span>光</span>
+                        <span>資</span>
+                        <span>城</span>
+                    </h1>
+                </div>
+            </div>
+            <div class="butdown">
+                <button class="start"><a href="#">開始遊戲</a></button>
+                <button class="scan"><a href="./web_index/webindex.html">瀏覽網頁</a></button>
+                <button class="picture"><a href="#">活動照片</a></button>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 使用TweenMax.staggerFrom()在檔案中應用文字淡入效果
+        TweenMax.staggerFrom(".leFadeInTop span", 1, {y:"-100%", autoAlpha:0, delay: 0.3, ease: Power4.easeOut}, 0.2);
+      </script>
+</body>
+</html>
