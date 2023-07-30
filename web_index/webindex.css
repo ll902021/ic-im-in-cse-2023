@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100vw;
+    height: 15vh;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.title{
+    font-size: 23px;
+    font-family: 'Yuji Boku', serif;
+}
+.subtitle{
+    font-size: 10px;
+    font-family: 'Klee One', cursive;
+}
+#computer{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 100vw;
+    height: 85vh;
+    background-color: whitesmoke;
+}
+#computer .one,#computer .two,#computer .three,#computer .four,#computer .five{
+    height: 100%;
+    width: 20%;
+}
+.one,.two,.three,.four,.five{
+    display: flex;
+    position: relative;
+    /* background-color: azure; */
+    /* background-color: white; */
+    border: 1px solid gray;
+    font-weight: bold;
+    opacity:0.6;
+    justify-content: center;
+    align-items: center;
+    /* font-family: 'Yuji Boku', serif; */
+    font-family: 'Klee One', cursive;
+    font-size: 30px;
+}
+.one a,.two a,.three a,.four a,.five a{
+    text-decoration: none;
+    text-shadow:
+    5px 5px 0 #000,
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    color: white;
+}
+#computer .one{
+    background-image: url(../webmaterial/1.png)
+}
+#computer .two{
+    background-image: url(../webmaterial/2.png)
+}
+#computer .three{
+    background-image: url(../webmaterial/3.png)
+}
+#computer .four{
+    background-image: url(../webmaterial/4.png)
+}
+#computer .five{
+    background-image: url(../webmaterial/5.png)
+}
+#phone .one{
+    background-image: url(../webmaterial/6.png)
+}
+#phone .two{
+    background-image: url(../webmaterial/7.png)
+}
+#phone .three{
+    background-image: url(../webmaterial/8.png)
+}
+#phone .four{
+    background-image: url(../webmaterial/9.png)
+}
+#phone .five{
+    background-image: url(../webmaterial/10.png)
+}
+.one:hover,.two:hover,.three:hover,.four:hover,.five:hover{
+    opacity: 1;
+    font-size: 40px;
+    /* width: 25%; */
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+#phone{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100vw;
+    height: 85vh;
+    background-color: whitesmoke;
+}
+#phone .one,#phone .two,#phone .three,#phone .four,#phone .five{
+    height: 20%;
+    width: 100%;
+}
+#phone{
+    display: none;
+}
+@media screen and (min-width: 320px) and (max-width: 799px) {
+    #phone {
+      display: block;
+    }
+    #computer{
+        display: none;
+    }
+}

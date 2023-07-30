@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* cursor:url('../webmaterial/remotecontrol.png'),-moz-zoom-out; */
+    /* cursor:url('../webmaterial/remotecontrol.png'),auto; */
+    cursor:url('../webmaterial/remotecontrol.ico'),pointer;
+}
+.showcase{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.showcase img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#computer,#phone{
+    display: none;
+}
+
+.tv{
+    position: fixed;
+    width: 99%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    /* background-color: yellow; */
+}
+.tv img{
+    /* background-color: aqua; */
+    max-height: 100%;  
+    max-width: 100%; 
+    width: auto;
+    height: auto;
+    position: absolute;  
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;
+    box-shadow: 4px 4px 10px #201919,
+    -4px -4px 10px #201919,
+    -4px -4px 10px #201919, 4px 4px 10px #201919;
+    z-index: 999;
+}
+.videocase{
+    /* background-color: aquamarine; */
+    border-radius: 20%;
+    position: absolute;
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;
+}
+@media screen and (min-width: 320px) and (max-width: 534px) {
+    #phone {
+      display: block;
+    }
+    .videocase{
+        height: 38%;
+        width: 70%;
+        right: 16%; 
+    }
+}
+@media screen and (min-width: 535px) and (max-width: 750px) {
+    #computer {
+        display: block;
+      }
+    .videocase{
+        height: 50%;
+        width: 70%;
+        right: 16%; 
+    }
+}
+@media screen and (min-width: 535px) {
+    #computer {
+      display: block;
+    }
+}
+@media screen and (min-width: 751px) and (max-width: 850px) {
+    #computer {
+        display: block;
+      }
+    .videocase{
+        height: 60%;
+        width: 70%;
+        right: 15%; 
+    }
+}
+@media screen and (min-width: 851px) and (max-width: 1000px) {
+    #computer {
+        display: block;
+      }
+    .videocase{
+        height: 60%;
+        width: 60%;
+        right: 13%; 
+    }
+}
+@media screen and (min-width: 1001px) and (max-width: 1150px) {
+    #computer {
+        display: block;
+      }
+    .videocase{
+        height: 60%;
+        width: 50%;
+        right: 12%; 
+    }
+}
+@media screen and (min-width: 1151px) and (max-width: 1250px) {
+    #computer {
+        display: block;
+    }
+    .videocase{
+        height: 60%;
+        width: 45%;
+        right: 12%; 
+    }
+}
+@media screen and (min-width: 1251px) {
+    #computer {
+        display: block;
+    }
+    .videocase{
+        height: 60%;
+        width: 41%;
+        right: 9%; 
+    }
+}
+#tvvideo,#actvideo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+#actvideo{
+    display: none;
+}
+
+.videocase video {
+    object-fit: cover;
+}

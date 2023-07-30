@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.showcase{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.showcase img{
+    width: 100%;
+    height: 100%;
+}
+#computer,#phone{
+    display: none;
+}
+.paper{
+    display: flex;
+    position: fixed;
+    height: 100%;
+    width: 80%;
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;
+    animation-name: paper;
+    animation-duration: 1.2s;
+    /* background-color: rebeccapurple; */
+}
+@keyframes paper{
+    from{
+        top:-200%;
+    }
+    to{
+        top:0;
+    }
+}
+.paper #paper{
+    box-shadow: 0px 0px 50px rgb(248, 245, 245),
+    0px 0px 50px rgb(248, 245, 245),
+    0px 0px 10px gainsboro, 0px 0px 10px gainsboro;
+}
+@media screen and (min-width: 320px) and (max-width: 534px) {
+    #phone {
+      display: block;
+    }
+    /* #dayy{
+        display: block;
+    } */
+}
+@media screen and (min-width: 320px) and (max-width: 534px) {
+    #phone {
+      display: block;
+    }
+    .paper{
+        height: 95%;
+        width: 95%;
+    }
+    /* #dayy{
+        display: block;
+    } */
+}
+@media screen and (min-width: 535px) and (max-width: 700px) {
+    .paper{
+        height: 90%;
+        width: 75%;
+    }
+}
+@media screen and (min-width: 535px) {
+    #computer {
+      display: block;
+    }
+}
+@media screen and (min-width: 701px) and (max-width: 930px) {
+    .paper{
+        height: 90%;
+        width: 60%;
+    }
+}
+@media screen and (min-width: 931px) and (max-width: 1250px) {
+    .paper{
+        height: 80%;
+        width: 40%;
+    }
+}
+@media screen and (min-width: 1251px) {
+    .paper{
+        height: 80%;
+        width: 33%;
+    }
+}
+.tack{
+    display: flex;
+    position: absolute;
+    left: -5px;
+    top: -10px;
+    width: 40px;
+    height: 60px;
+    /* background-color: blue; */
+    z-index: 999;
+}
+.tack img{
+    width: 100%;
+    height: 100%;
+}
+.leave{
+    display: flex;
+    position: absolute;
+    right: 0px;
+    /* background-color: brown; */
+    width: 40px;
+    height: 40px;
+}
+.leave button{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid ;
+    background-color: transparent;
+}
+.leave button a{
+    color: black;
+    text-decoration: none;
+}
+.leave button:hover{
+    color: white;
+    background-color: brown;
+}
+.schhedule{
+    display: flex;
+    position: absolute;
+    height: 80%;
+    width: 95%;
+    /* background-color: tomato; */
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 2rem;
+}
+.schtop{
+    position: absolute;
+    justify-content: center;
+    margin: auto;
+    height: 10%;
+    width: 100%;
+    /* background-color: cadetblue; */
+    display: flex;
+    flex-direction: row;
+    border: 2px solid rgba(0, 0, 0, 0.537);
+    background-color: rgba(206, 175, 138, 0.967);
+    /* font-family: 'Yuji Boku', serif; */
+    font-family: 'Klee One', cursive;
+
+}
+.day1,.day2,.day3{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+    width: 20%;
+    margin: auto;
+    font-size: 0.5rem;
+    /* align-items:end; */
+    justify-content: center;
+}
+/* .day1{
+    background-color: yellowgreen;
+}
+.day2{
+    background-color: chocolate;
+}
+.day3{
+    background-color: aquamarine;
+} */
+.day1but,.day2but,.day3but{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 3px solid black;
+    cursor: pointer;
+    color: red;
+    background-color: bisque;
+}
+.day1text{
+    display: flex;
+    position: absolute;
+    margin: auto;
+    right: 0;
+    /* left: 0; */
+}
+#checkmark-two,#checkmark-three {
+    display: none; 
+}
+
+.day1but:hover #checkmark-one, .day2but:hover #checkmark-two,.day3but:hover #checkmark-three{
+    display: block; 
+    color: red;
+}
+/* .day1but:hover {
+    background-color: white;
+} */
+.schbottom{
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    bottom: 0;
+    /* background-color: cadetblue; */
+    display: flex;
+    /* border: 2px solid black; */
+}
+#oone,#ttwo,#tthree{
+    align-items: center;
+    justify-content:flex-start;
+    flex-direction: column;
+}
+.day,#dayy{
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(206, 175, 138, 0.967);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.537);
+    border-left: 2px solid rgba(0, 0, 0, 0.537);
+    border-right: 2px solid rgba(0, 0, 0, 0.537);
+    font-size: 0.7rem;
+    font-family: 'Klee One', cursive;
+    /* font-family: 'Yuji Boku', serif; */
+    padding-left: 5px;
+}
+#tthree,#ttwo{
+    display: none;
+}
+#dayy{
+    display: none;
+}
+.text{
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 30%;
+    margin: auto;
+    font-size: 0.7rem;
+    align-items: center;
+    justify-content: start;
+    /* background-color: aqua; */
+}
