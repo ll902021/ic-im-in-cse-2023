@@ -1,24 +1,24 @@
 <?php
-    // $host = "localhost";
-    // $user = "root";
-    // $pass = "";
-    // $dbname = "迎新報名表";
+    $host = "111.248.73.228";
+    $user = "root";
+    $pass = "1122";
+    $dbname = "register_files";
 
-    // $conn = new mysqli($host,$user,$pass,$dbname,3306 );
+    $conn = new mysqli($host,$user,$pass,$dbname,3306 );
 
-    class SQLiteDB extends SQLite3{
-        function __construct(){
-            $this->open('register_files.db');
-        }
-    }
+    // class SQLiteDB extends SQLite3{
+    //     function __construct(){
+    //         $this->open('register_files.db');
+    //     }
+    // }
 
-    $db = new SQLiteDB();
+    // $db = new SQLiteDB();
 
-    if(!$db){
-        echo $db->lastErrorMsg();
-    } else {
-        echo "Yes, Opened database successfully<br/>\n";
-    }
+    // if(!$db){
+    //     echo $db->lastErrorMsg();
+    // } else {
+    //     echo "Yes, Opened database successfully<br/>\n";
+    // }
 
     if(isset($_POST['submit']) && (!empty($_POST['submit']))){
         $username = $_POST['name'];
@@ -42,14 +42,14 @@
         $sql = "INSERT INTO `applicants`(`name`, `id`, `sex`, `food`, `idcard`, `birth`, `phone`, `size`, `emgname`, `emgphone`, `relation`) 
         values ('$username','$id','$sex','$food','$idcard','$roc_birth','$phone','$size','$emgname','$emgphone','$relation')";
 
-        //$result = mysqli_query($conn,$sql) or die("something went wrong");
+        $result = mysqli_query($conn,$sql) or die("something went wrong");
 
-        $ret = $db->exec($sql);
+        // $ret = $db->exec($sql);
 
-        if(!$ret){
-            echo $db->lastErrorMsg();
-        } else {
-            echo "Yes, Some Records has Inserted successfully<br/>\n";
-        }
-        $db->close();
+        // if(!$ret){
+        //     echo $db->lastErrorMsg();
+        // } else {
+        //     echo "Yes, Some Records has Inserted successfully<br/>\n";
+        // }
+        // $db->close();
 ?>
