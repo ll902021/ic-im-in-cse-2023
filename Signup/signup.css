@@ -1,0 +1,442 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+	background: #000;
+	overflow: hidden;
+}
+/* 以下為電腦狀態 */
+.form{
+    height: 90vh;
+    width: 50vw;
+    display: flex;
+    position: absolute;
+    background-color: rgba(255,255,255,0.13);
+    transform: translate((-50%,-50%));
+    top: 5vh;
+    left:25vw;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    /* border:2px solid rgba(255,255,255,0.1); */
+    border: 2px solid #00ccff;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 20px 30px;
+    color: white;
+    align-self:center;
+    justify-content:flex-start;
+    flex-direction: column;
+    font-family: 'Shippori Mincho', serif;
+}
+.first{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    height: 7%;
+    width: 100%;
+    /* background-color: black; */
+}
+.name,.id,.sex,.food{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    /* background-color: antiquewhite; */
+}
+input:focus{
+    border-bottom-color: #89caff;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(241, 249, 255, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(241, 249, 255,.6)
+}
+#name{
+    width: 50%;
+}
+#id{
+    width: 50%;
+}
+#name,#id{
+    margin-left: 6px;
+    color: white;
+    height: 70%;
+    border-bottom: 1px solid #c2e3ff ;
+    background-color: rgba(165, 165, 165, 0.13);
+    font-size: 90%;
+}
+#female,#male,#meat,#veg{
+    margin-left: 10px;
+    height: 80%;
+    margin-bottom: 0;
+}
+.idcard{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 120%;
+}
+.second{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    height: 12%;
+    width: 100%;
+    /* background-color: black; */
+}
+#idcard{
+    color: white;
+    height: 38%;
+    width: 70%;
+    border-bottom: 1px solid #c2e3ff ;
+    background-color: rgba(165, 165, 165, 0.13);
+    font-size: 90%;
+}
+.birth,.phone,.size{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 80%;
+}
+option,select{
+    outline-style: none;
+    border: 0;
+}
+#birth,#phone{
+    width: 38%;
+}
+#size{
+    width: 20%;
+}
+#birth,#phone,#size{
+    margin-left: 6px;
+    color: white;
+    height: 80%;
+    border-bottom: 1px solid #c2e3ff ;
+    background-color: rgba(165, 165, 165, 0.13);
+    font-size: 80%;
+}
+option{
+    color: rgb(0, 0, 0);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.sizechart{
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-left: 6px;
+}
+.sizechart:hover{
+    color: #6de2ff;
+}
+.relation{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 90%;
+}
+#relation{
+    margin-left: 6px;
+    color: white;
+    height: 80%;
+    width: 15%;
+    border-bottom: 1px solid #c2e3ff ;
+    background-color: rgba(165, 165, 165, 0.13);
+    font-size: 80%;
+}
+.leave{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+#computer h2{
+    text-align: center;
+    /* padding-bottom: 10px; */
+    font-size: 40px;
+}
+#computer p,#pphone p{
+    color: red;
+}
+.leave button{
+    outline-style: none;
+    border: 0;
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(165, 165, 165, 0.13);
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    justify-content: center;
+    font-size: 40px;
+}
+.leave button p{
+    color: white;
+}
+.leave button:hover{
+    background-color: white;
+}
+.leave button a:hover{
+    color: #00ccff;
+}
+input{
+    outline-style: none;
+    border: 0;
+}
+#submit {
+    position: absolute;
+    width: 30%;
+    height: 8%;
+    left: 35%;
+    bottom: 5%;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: white;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, #03a9f4, #f441a5, #ffeb3b, #09a8f4);
+    background-size: 400%;
+    z-index: 1;
+    font-family: 'Shippori Mincho', serif;
+}
+#submit::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, #03a9f4, #f441a5, #ffeb3b, #09a8f4);
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(20px);
+}
+#submit:hover {
+    animation: sun 8s infinite;
+}
+#submit:hover::before {
+    animation: sun 8s infinite;
+}
+
+@keyframes sun {
+    100% {
+        background-position: -400% 0;
+    }
+}
+
+/* 以下為手機及平板狀態 */
+.fform{
+    display: flex;
+    position: absolute;
+    background-color: rgba(255,255,255,0.13);
+    transform: translate((-50%,-50%));
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    /* border:2px solid rgba(255,255,255,0.1); */
+    border: 2px solid #00ccff;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    color: white;
+    align-self:center;
+    justify-content:flex-start;
+    flex-direction: column;
+    font-family: 'Shippori Mincho', serif;
+}
+.ffirst{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    height: 5.5%;
+    width: 100%;
+    /* background-color: #00ccff; */
+}
+#pphone h2{
+    font-size: 30px;
+}
+#nname{
+    width: 50%;
+}
+#iid{
+    width: 50%;
+}
+#nname,#iid{
+    margin-left: 6px;
+    color: white;
+    /* height: 1.5rem; */
+    border-bottom: 1px solid #c2e3ff ;
+    background-color: rgba(165, 165, 165, 0.13);
+    font-size: 90%;
+}
+#ffemale,#mmale,#mmeat,#vveg{
+    margin-left: 10px;
+    /* height: 90%; */
+}
+.ssecond{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    height: 8.8%;
+    width: 100%;
+    /* background-color: black; */
+}
+.iidcard{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    /* height: 120%; */
+}
+#iidcard{
+    color: white;
+    /* height: 65%; */
+    width: 60%;
+    border-bottom: 1px solid #c2e3ff ;
+    background-color: rgba(165, 165, 165, 0.13);
+    font-size: 90%;
+}
+.nname,.iid,.ssex,.ffood,.bbirth,.ssize,.ppphone,.rrelation{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#bbirth,#ppphone{
+    width: 40%;
+}
+#ssize{
+    width: 15%;
+}
+#bbirth,#ppphone,#ssize{
+    margin-left: 6px;
+    color: white;
+    /* height: 1.5rem; */
+    border-bottom: 1px solid #c2e3ff ;
+    background-color: rgba(165, 165, 165, 0.13);
+    font-size: 90%;
+}
+#rrelation{
+    margin-left: 6px;
+    color: white;
+    /* height: 1.5rem; */
+    width: 15%;
+    border-bottom: 1px solid #c2e3ff ;
+    background-color: rgba(165, 165, 165, 0.13);
+    font-size: 90%;
+}
+
+
+
+#computer,#pphone{
+    display: none;
+}
+/* 手機狀態 */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    #pphone {
+        display: block;
+    }
+    .fform{
+        height: 90vh;
+        width: 90vw;
+        top: 5vh;
+        left:5vw;
+        padding: 25px 20px;
+    }
+    #pphone #submit{
+        font-size: 20px;
+        width: 50%;
+        height: 7%;
+        left: 25%;
+        bottom: 10%;
+    }
+    #pphone h3{
+        font-size: 0.8rem;
+    }
+    #ffemale,#mmale,#mmeat,#vveg{
+        margin-left: 10px;
+        height: 40%;
+    }
+    .iidcard{
+        height: 110%;
+    }
+    #iidcard{
+        height: 60%;
+    }
+    #bbirth,#ppphone,#ssize,#nname,#iid,#rrelation{
+        height: 1.5rem;
+    }
+    .ssize .sizechart h4{
+        position: relative;
+        font-size: 10px;
+        align-items: flex-end;
+    }
+    .leave button a{
+        color: #00ccff;
+    }
+}
+/* 平板狀態 */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    #pphone {
+        display: block;
+    }
+    .fform{
+        padding: 50px 50px;
+        height: 90vh;
+        width: 80vw;
+        top: 5vh;
+        left: 10vw;
+    }
+    #pphone #submit{
+        font-size: 20px;
+        width: 50%;
+        height: 7%;
+        left: 25%;
+        bottom: 10%;
+    }
+    #pphone h2{
+        font-size: 40px;
+    }
+    #pphone h3{
+        font-size: 1.5rem;
+    }
+    #ffemale,#mmale,#mmeat,#vveg{
+        margin-left: 10px;
+        height: 80%;
+    }
+    .iidcard{
+        height: 110%;
+    }
+    #iidcard{
+        height: 60%;
+    }
+    #bbirth,#ppphone,#ssize,#nname,#iid,#rrelation{
+        height: 2.2rem;
+    }
+    .ssize .sizechart h4{
+        position: relative;
+        font-size: 20px;
+        align-items: flex-end;
+    }
+    .leave button a{
+        color: #00ccff;
+    }
+}
+/* 電腦狀態 */
+@media screen and (min-width: 1200px) {
+    #computer {
+        display: block;
+    }
+} 

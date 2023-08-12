@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>暮光資城</title>
+    <link href="./signup.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Yuji+Boku&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Shippori+Mincho:wght@600&family=Yuji+Boku&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="canvas">
+    </canvas>
+    <div id="computer">
+    <form action="signup.php" method="post" class="form">
+        <div class="leave">
+            <h2>報名表</h2>
+            <button><p><a href="../web_index/webindex.html">×</a></p></button>
+        </div>
+        <p>※報名費為 1500 元，現場繳交，含餐費、營服、保險</p>
+        <div class="first">
+            <div class="name">
+                <h3>姓名Name:</h3><input type="text" name="name" placeholder="曾X錢" id="name" required />
+            </div>
+            <div class="id">
+                <h3>學號ID:</h3><input type="text" name="id" placeholder="112XXXX" id="id" required />
+            </div>
+        </div>
+        <div class="first">
+            <div class="sex">
+                <h3>性別Gender:</h3>
+                <input type="radio" name="sex" value="girl" id="female" required /><h3>女&thinsp;F</h3>
+                <input type="radio" name="sex" value="boy" id="male" required /><h3>男&thinsp;M</h3>
+            </div>
+            <div class="food">
+                <h3>飲食習慣:</h3>
+                <input type="radio" name="food" value="meat" id="meat" required /><h3>葷</h3>
+                <input type="radio" name="food" value="veg" id="veg" required /><h3>素</h3>
+            </div>
+        </div>
+        <div class="second">
+            <div class="idcard">
+                <h3>身分證字號/Residence NO./Passport NO. (保險用)</h3>
+                <input type="text" name="idcard" placeholder="A123456789" id="idcard" required />
+            </div>
+        </div>
+        <div class="first">
+            <div class="birth">
+                <h3>出生日期Birthday:</h3><input type="date" name="birth" id="birth" required />
+            </div>
+        </div>
+        <div class="first">
+            <div class="phone">
+                <h3>聯絡電話Phone Number:</h3><input type="text" name="phone" id="phone" placeholder="0912345678" maxlength="10" pattern="09\d{8}" required />
+            </div>
+        </div>
+        <div class="first">
+            <div class="size">
+                <h3>營服尺寸Clothing Size:</h3>
+                <select name="size" id="size" required>
+                    <option value="">請選擇尺寸</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL(+20)</option>
+                    <option value="XXXL">XXXL(+40)</option>
+                </select>
+                <a href="../size/size.html" class="sizechart"><h4>尺寸表Size Chart</h4></a>
+            </div>
+        </div>
+        <div class="first"> 
+            <h3>以下為緊急連絡人資料Emergency Contact&thinsp;(保險用)</h3>
+        </div>
+        <div class="first"> 
+            <div class="name">
+                <h3>姓名Name:</h3><input type="text" name="emgname" id="name" placeholder="郭X銘" required />
+            </div>
+        </div>
+        <div class="first">
+            <div class="phone">
+                <h3>聯絡電話Phone Number:</h3><input type="text" name="emgphone" id="phone" placeholder="0912345678" maxlength="10" pattern="09\d{8}" required />
+            </div>
+        </div>
+        <div class="first">
+            <div class="relation">
+                <h3>關係Relationship:</h3><input type="text" name="relation" placeholder="父子" id="relation" required />
+            </div>
+        </div>
+        <input type="submit" value="提交Submit" id="submit">
+    </form>
+    </div>
+
+    <div id="pphone">
+        <form action="signup.php" method="post" class="fform">
+            <div class="leave">
+                <h2>報名表</h2>
+                <button><p><a href="../web_index/webindex.html">×</a></p></button>
+            </div>
+            <p>※報名費為 1500 元，現場繳交<br>含餐費、營服、保險</p>
+            <div class="ffirst">
+                <div class="nname">
+                    <h3>姓名Name:</h3><input type="text" name="name" placeholder="曾X錢" id="nname" required />
+                </div>
+            </div>
+            <div class="ffirst">
+                <div class="iid">
+                    <h3>學號ID:</h3><input type="text" name="id" placeholder="112XXXX" id="iid" required />
+                </div>
+            </div>
+            <div class="ffirst">
+                <div class="ssex">
+                    <h3>性別Gender:</h3>
+                    <input type="radio" name="sex" value="girl" id="ffemale" required /><h3>女&thinsp;F</h3>
+                    <input type="radio" name="sex" value="boy" id="mmale" required /><h3>男&thinsp;M</h3>
+                </div>
+            </div>
+            <div class="ffirst">
+                <div class="ffood">
+                    <h3>飲食習慣:</h3>
+                    <input type="radio" name="food" value="meat" id="mmeat" required /><h3>葷</h3>
+                    <input type="radio" name="food" value="veg" id="vveg" required /><h3>素</h3>
+                </div>
+            </div>
+            <div class="ssecond">
+                <div class="iidcard">
+                    <h3>身分證字號/Residence NO./Passport NO.</h3>
+                    <div style="display: flex; flex-direction: row; height: 100%; width: 100%;">
+                    <input type="text" name="idcard" placeholder="A123456789" id="iidcard" required /><h3>&thinsp;&thinsp;(保險用)</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="ffirst">
+                <div class="bbirth">
+                    <h3>出生日期Birthday:</h3><input type="date" name="birth" id="bbirth" required />
+                </div>
+            </div>
+            <div class="ffirst">
+                <div class="ppphone">
+                    <h3>聯絡電話Phone Number:</h3><input type="text" name="phone" id="ppphone" placeholder="0912345678" maxlength="10" pattern="09\d{8}" required />
+                </div>
+            </div>
+            <div class="ffirst">
+                <div class="ssize">
+                    <h3>營服尺寸Clothing Size:</h3>
+                    <select name="size" id="ssize" required>
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL(+20)</option>
+                        <option value="XXXL">XXXL(+40)</option>
+                    </select>
+                    <a href="../size/size.html" class="sizechart"><h4>尺寸表Size Chart</h4></a>
+                </div>
+            </div>
+            <div class="ffirst"> 
+                <h3>緊急連絡人資料Emergency Contact&thinsp;(保險用)</h3>
+            </div>
+            <div class="ffirst"> 
+                <div class="nname">
+                    <h3>姓名Name:</h3><input type="text" name="emgname" id="nname" placeholder="郭X銘" required />
+                </div>
+            </div>
+            <div class="ffirst">
+                <div class="ppphone">
+                    <h3>聯絡電話Phone Number:</h3><input type="text" name="emgphone" id="ppphone" placeholder="0912345678" maxlength="10" pattern="09\d{8}" required />
+                </div>
+            </div>
+            <div class="ffirst">
+                <div class="rrelation">
+                    <h3>關係Relationship:</h3><input type="text" name="relation" placeholder="父子" id="rrelation" required />
+                </div>
+            </div>
+            <input type="submit" value="提交Submit" id="submit">
+        </form>
+    </div>
+    <script>
+        var canvas = document.getElementById('canvas'),
+            ctx = canvas.getContext('2d'),
+            w = canvas.width = window.innerWidth,
+            h = canvas.height = window.innerHeight,
+            hue = 217,
+            stars = [],
+            count = 0,
+            maxStars = 1500;
+
+        var canvas2 = document.createElement('canvas');
+        var w2 = canvas2.width = 100;
+        var h2 = canvas2.height = 100;
+        var ctx2 = canvas2.getContext("2d");
+
+        var gradientCache = ctx2.createRadialGradient(
+                w2 / 2,
+                h2 / 2,
+                0,
+                w2 / 2,
+                h2 / 2,
+                w2 / 2
+        );
+        gradientCache.addColorStop(0.025, '#fff');
+        gradientCache.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
+        gradientCache.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
+        gradientCache.addColorStop(1, 'transparent');
+        ctx2.fillStyle = gradientCache;
+        ctx2.beginPath();
+        ctx2.arc(w2 / 2, h2 / 2, w2 / 2, 0, Math.PI * 2);
+        ctx2.fill();
+
+        function random(min, max) {
+            if (arguments.length < 2) {
+                max = min;
+                min = 0;
+            }
+
+            if (min > max) {
+                var hold = max;
+                max = min;
+                min = hold;
+            }
+
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function maxOrbit(x,y) {
+            var max = Math.max(x,y),
+                diameter = Math.round(Math.sqrt(max*max + max*max));
+            return diameter/2;
+        }
+
+        var Star = function() {
+            this.orbitRadius = random(maxOrbit(w,h));
+            this.radius = random(60, this.orbitRadius) / 10;
+            this.orbitX = w / 2;
+            this.orbitY = h / 2;
+            this.timePassed = random(0, maxStars);
+            this.speed = random(this.orbitRadius) / 30000;
+            this.alpha = random(2, 10) / 10;
+
+            count++;
+            stars[count] = this;
+        }
+
+        Star.prototype.draw = function() {
+            var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX,
+                y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY,
+                twinkle = random(10);
+
+            if (twinkle === 1 && this.alpha > 0) {
+                this.alpha -= 0.05;
+            } else if (twinkle === 2 && this.alpha < 1) {
+                this.alpha += 0.05;
+            }
+            
+            ctx.globalAlpha = this.alpha;
+            
+            ctx.drawImage( canvas2, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius );
+            this.timePassed += this.speed;
+        }
+
+        for (var i = 0; i < maxStars; i++) {
+            new Star();
+        }
+
+        function animation() {
+            ctx.globalCompositeOperation = 'source-over';
+            ctx.globalAlpha = 0.8;
+            ctx.fillStyle = 'hsla(' + hue + ', 64%, 6%, 1)';
+            ctx.fillRect(0, 0, w, h)
+
+            ctx.globalCompositeOperation = 'lighter';
+            for (var i = 1, l = stars.length; i < l; i++) {
+                stars[i].draw();
+            };  
+            window.requestAnimationFrame(animation);
+        }
+
+        animation();
+    </script>
+</body>
+</html>

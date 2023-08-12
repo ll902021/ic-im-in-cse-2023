@@ -5,7 +5,7 @@ export default {
             'BG:2': './images/backGround/night.gif'
         },
         player: {
-            standing: './images/player/pepe.gif',
+            standing: './images/player/host.png',
             running: './images/player/walk.gif'
         },
         npc: {
