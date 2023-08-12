@@ -1,10 +1,11 @@
 <?php
-    $host = "111.248.73.228";
+    $host = "localhost";
     $user = "root";
     $pass = "1122";
     $dbname = "register_files";
 
-    $conn = new mysqli($host,$user,$pass,$dbname,3306 );
+    $conn = mysqli_connect($host,$user,$pass,$dbname);
+	mysqli_query($conn,'SET NAMES "UTF8MB4"');
 
     // class SQLiteDB extends SQLite3{
     //     function __construct(){
@@ -20,7 +21,7 @@
     //     echo "Yes, Opened database successfully<br/>\n";
     // }
 
-    if(isset($_POST['submit']) && (!empty($_POST['submit']))){
+    //if(isset($_POST['submit']) && (!empty($_POST['submit']))){
         $username = $_POST['name'];
         $id = $_POST['id'];
         $sex = $_POST['sex'];
@@ -52,4 +53,6 @@
         //     echo "Yes, Some Records has Inserted successfully<br/>\n";
         // }
         // $db->close();
+		mysqli_close($conn);
+	//}
 ?>
