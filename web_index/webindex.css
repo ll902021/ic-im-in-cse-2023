@@ -37,14 +37,11 @@
 .one,.two,.three,.four,.five{
     display: flex;
     position: relative;
-    /* background-color: azure; */
-    /* background-color: white; */
     border: 1px solid gray;
     font-weight: bold;
     opacity:0.6;
     justify-content: center;
     align-items: center;
-    /* font-family: 'Yuji Boku', serif; */
     font-family: 'Klee One', cursive;
     font-size: 30px;
 }
@@ -96,6 +93,7 @@
 }
 a{
     text-decoration: none;
+
 }
 #phone{
     display: flex;
