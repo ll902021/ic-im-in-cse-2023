@@ -48,3 +48,4 @@ function writeUserData(userId, name, email, imageUrl) {
 }
 
 writeUserData("a", "b", "c", "d");
+database.ref('/').set({a:123});
