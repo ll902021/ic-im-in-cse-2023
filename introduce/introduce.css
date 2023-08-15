@@ -15,6 +15,7 @@
 .showcase img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 #computer,#phone{
     display: none;
@@ -112,8 +113,8 @@
 }
 .barmid h1{
     position: absolute;
-    /* font-family: 'Klee One', cursive; */
-    font-family: 'Yuji Boku', serif;
+    font-family: 'Klee One', cursive;
+    /* font-family: 'Yuji Boku', serif; */
 }
 .barright{
     position: absolute;
@@ -165,26 +166,43 @@
     height: 100%;
     /* background-color:#452b03; */
 }
-#two,#three,#four,#five{
+#two,#three,#four,#five,#six{
     display: none;
 }
 a{
     text-decoration: none;
 }
-.btnone,.btntwo,.btnthree,.btnfour,.btnfive{
+.btnone,.btnonetwo:focus,.btnonetwo:hover{
+    height: 35px;
+    width: 35px;
+    background-color: #ee950e;
+    color: white;
+    border-radius: 100%;
+}
+.btnonetwo{
     height: 35px;
     width: 35px;
     background-color: #f8ea82;
     color: #b16b03;
     border-radius: 100%;
 }
-.btnone:hover,.btnone:focus,.btntwo:hover,.btntwo:focus,.btnthree:focus,.btnthree:hover,.btnfour:hover,.btnfour:focus,.btnfive:hover,.btnfive:focus{
+.btnonetwo{
+    display: none;
+}
+.btntwo,.btnthree,.btnfour,.btnfive,.btnsix{
+    height: 35px;
+    width: 35px;
+    background-color: #f8ea82;
+    color: #b16b03;
+    border-radius: 100%;
+}
+.btntwo:hover,.btntwo:focus,.btnthree:focus,.btnthree:hover,.btnfour:hover,.btnfour:focus,.btnfive:hover,.btnfive:focus,.btnsix:focus,.btnsix:hover{
     height: 35px;
     width: 35px;
     background-color: #ee950e;
     color: white;
 }
-.btnsix{
+.btnseven{
     height: 35px;
     width: 35px;
     border-radius: 100%;
@@ -192,7 +210,7 @@ a{
     color: red;
     font-size: 150%;
 }
-.btnsix:hover{
+.btnseven:hover{
     background-color: red;
     color: white;
 }

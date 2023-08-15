@@ -11,6 +11,7 @@
 .showcase img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 #computer,#phone{
     display: none;
@@ -18,8 +19,6 @@
 .paper{
     display: flex;
     position: fixed;
-    height: 100%;
-    width: 80%;
     top: 0;  
     bottom: 0;  
     left: 0;  
@@ -42,55 +41,7 @@
     0px 0px 50px rgb(248, 245, 245),
     0px 0px 10px gainsboro, 0px 0px 10px gainsboro;
 }
-@media screen and (min-width: 320px) and (max-width: 534px) {
-    #phone {
-      display: block;
-    }
-    /* #dayy{
-        display: block;
-    } */
-}
-@media screen and (min-width: 320px) and (max-width: 534px) {
-    #phone {
-      display: block;
-    }
-    .paper{
-        height: 95%;
-        width: 95%;
-    }
-    /* #dayy{
-        display: block;
-    } */
-}
-@media screen and (min-width: 535px) and (max-width: 700px) {
-    .paper{
-        height: 90%;
-        width: 75%;
-    }
-}
-@media screen and (min-width: 535px) {
-    #computer {
-      display: block;
-    }
-}
-@media screen and (min-width: 701px) and (max-width: 930px) {
-    .paper{
-        height: 90%;
-        width: 60%;
-    }
-}
-@media screen and (min-width: 931px) and (max-width: 1250px) {
-    .paper{
-        height: 80%;
-        width: 40%;
-    }
-}
-@media screen and (min-width: 1251px) {
-    .paper{
-        height: 80%;
-        width: 33%;
-    }
-}
+
 .tack{
     display: flex;
     position: absolute;
@@ -170,15 +121,6 @@
     /* align-items:end; */
     justify-content: center;
 }
-/* .day1{
-    background-color: yellowgreen;
-}
-.day2{
-    background-color: chocolate;
-}
-.day3{
-    background-color: aquamarine;
-} */
 .day1but,.day2but,.day3but{
     display: flex;
     position: relative;
@@ -224,23 +166,19 @@
     justify-content:flex-start;
     flex-direction: column;
 }
-.day,#dayy{
+.day{
     display: flex;
     width: 100%;
-    height: 3rem;
+    /* height: 3rem; */
     background-color: rgba(206, 175, 138, 0.967);
     border-bottom: 2px solid rgba(0, 0, 0, 0.537);
     border-left: 2px solid rgba(0, 0, 0, 0.537);
     border-right: 2px solid rgba(0, 0, 0, 0.537);
     font-size: 0.7rem;
     font-family: 'Klee One', cursive;
-    /* font-family: 'Yuji Boku', serif; */
     padding-left: 5px;
 }
 #tthree,#ttwo{
-    display: none;
-}
-#dayy{
     display: none;
 }
 .text{
@@ -254,3 +192,56 @@
     justify-content: start;
     /* background-color: aqua; */
 }
+/* 手機狀態 */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    #phone {
+        display: block;
+    }
+    .paper{
+        height: 90%;
+        width: 90%;
+    }
+    .day{
+        height: 10%;
+    }
+}
+/* 平板狀態 */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    #phone {
+        display: block;
+    }
+    .paper{
+        height: 70%;
+        width: 60%;
+    }
+    .day{
+        height: 10%;
+        font-size: 0.85rem;
+    }
+    .text{
+        font-size: 0.85rem;
+    }
+    .day1,.day2,.day3{
+        font-size: 0.7rem;
+    }
+}
+/* 電腦狀態 */
+@media screen and (min-width: 1200px) {
+    #computer {
+        display: block;
+    }
+    .paper{
+        height: 90%;
+        width: 40%;
+    }
+    .day{
+        height: 10%;
+        font-size: 0.8rem;
+    }
+    .text{
+        font-size: 0.8rem;
+    }
+    .day1,.day2,.day3{
+        font-size: 0.65rem;
+    }
+} 

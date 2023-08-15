@@ -8,8 +8,19 @@ body {
     width: 100vw;
 	background: #000;
 	overflow: hidden;
+    /* background: url(../webmaterial/bg_computer.png);
+    background-size: cover; */
 }
-/* 以下為電腦狀態 */
+.showcase{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.showcase img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .form{
     height: 90vh;
     width: 50vw;
@@ -29,7 +40,9 @@ body {
     align-self:center;
     justify-content:flex-start;
     flex-direction: column;
-    font-family: 'Shippori Mincho', serif;
+    /* font-family: 'Shippori Mincho', serif; */
+    font-family: 'Klee One', cursive;
+
 }
 .first{
     display: flex;
@@ -39,13 +52,20 @@ body {
     width: 100%;
     /* background-color: black; */
 }
-.name,.id,.sex,.food{
+.name,.id,.sex{
     display: flex;
     flex-direction: row;
     position: relative;
     width: 50%;
     height: 100%;
     /* background-color: antiquewhite; */
+}
+.food{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width:80%;
+    height: 100%;
 }
 input:focus{
     border-bottom-color: #89caff;
@@ -199,7 +219,7 @@ input{
     position: absolute;
     width: 30%;
     height: 8%;
-    left: 35%;
+    /* left: 65%; */
     bottom: 5%;
     text-align: center;
     justify-content: center;
@@ -210,7 +230,9 @@ input{
     background-image: linear-gradient(to right, #03a9f4, #f441a5, #ffeb3b, #09a8f4);
     background-size: 400%;
     z-index: 1;
-    font-family: 'Shippori Mincho', serif;
+    /* font-family: 'Shippori Mincho', serif; */
+    font-family: 'Klee One', cursive;
+
 }
 #submit::before {
     content: '';
@@ -253,7 +275,9 @@ input{
     align-self:center;
     justify-content:flex-start;
     flex-direction: column;
-    font-family: 'Shippori Mincho', serif;
+    /* font-family: 'Shippori Mincho', serif; */
+    font-family: 'Klee One', cursive;
+
 }
 .ffirst{
     display: flex;
@@ -363,7 +387,7 @@ input{
         bottom: 10%;
     }
     #pphone h3{
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
     #ffemale,#mmale,#mmeat,#vveg{
         margin-left: 10px;
@@ -385,6 +409,9 @@ input{
     }
     .leave button a{
         color: #00ccff;
+    }
+    #submit {
+        left: 35%;
     }
 }
 /* 平板狀態 */
@@ -410,7 +437,7 @@ input{
         font-size: 40px;
     }
     #pphone h3{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     #ffemale,#mmale,#mmeat,#vveg{
         margin-left: 10px;
@@ -433,10 +460,16 @@ input{
     .leave button a{
         color: #00ccff;
     }
+    #submit {
+        left: 35%;
+    }
 }
 /* 電腦狀態 */
 @media screen and (min-width: 1200px) {
     #computer {
         display: block;
+    }
+    #submit {
+        left: 65%;
     }
 } 

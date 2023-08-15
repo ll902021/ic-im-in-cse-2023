@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.showcase{
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.showcase img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#computer .paper{
+    display: flex;
+    position: fixed;
+    width: 70vw;
+    height: 80vh;
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;
+    animation-name: paper;
+    animation-duration: 1.2s;
+    /* background-color: rebeccapurple; */
+}
+@keyframes paper{
+    from{
+        top:-200%;
+    }
+    to{
+        top:0;
+    }
+}
+.paper #paper{
+    box-shadow: 0px 0px 50px rgb(248, 245, 245),
+    0px 0px 50px rgb(248, 245, 245),
+    0px 0px 10px gainsboro, 0px 0px 10px gainsboro;
+}
+.leave{
+    display: flex;
+    position: absolute;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+}
+.leave button{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid ;
+    background-color: transparent;
+}
+.leave button a{
+    color: black;
+    text-decoration: none;
+}
+.leave button:hover{
+    color: white;
+    background-color: brown;
+}
+#computer .list{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 65vw;
+    height: 70vh;
+    /* justify-content: space-evenly; */
+}
+#computer .left,#computer .mid,#computer .right{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    height: 100%;
+    width: 33.1%;
+}
+#computer .text{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 10.9%;
+    width: 100%;
+    /* border: 2px solid rgba(0, 0, 0, 0.537); */
+    background-color: rgba(206, 175, 138, 0.967);
+    font-family: 'Klee One', cursive;
+}
+#computer h1{
+    font-size: 1rem;
+}
+#computer h2{
+    font-size: 0.95rem;
+    color: brown;
+}
+#phone .paper{
+    display: flex;
+    position: absolute;
+    width: 85vw;
+    height: 85vh;
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;
+    animation-name: paper;
+    animation-duration: 1.2s;
+    /* background-color: rebeccapurple; */
+}
+#phone .list{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    /* background-color: black; */
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 78vw;
+    height: 75vh;
+    overflow: scroll;
+}
+#phone .text{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 10%;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 2px dashed rgba(0, 0, 0, 0.537);
+    border-collapse:collapse;
+    background-color: rgba(206, 175, 138, 0.967);
+    font-family: 'Klee One', cursive;
+}
+#phone .textlast{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 10%;
+    width: 100%;
+    padding: 10px;
+    border-collapse:collapse;
+    background-color: rgba(206, 175, 138, 0.967);
+    font-family: 'Klee One', cursive;
+}
+#phone h1{
+    font-size: 1rem;
+}
+#phone h2{
+    font-size: 0.95rem;
+    color: brown;
+}
+#phone,#computer{
+    display: none;
+}
+/* 手機狀態 */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    #phone{
+        display: block;
+    }
+}
+/* 平板狀態 */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    #computer{
+        display: block;
+    }
+}
+/* 電腦狀態 */
+@media screen and (min-width: 1200px) {
+    #computer{
+        display: block;
+    }
+} 

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>暮光資城</title>
+    <link href="./video.css" rel="stylesheet">
+    <script src="./video.js"></script>
+</head>
+<body>
+    <div class="showcase">
+        <img id="computer" src="../webmaterial/bg_computer.png">
+        <button class="returnbtn" onclick="returnbtn();"></button>
+        <div class="tvcase">
+            <img id="tv" src="../webmaterial/tv.png">
+            <div class="videocase">
+                <video id="tvvideo" src="../webmaterial/tv.mp4" autoplay muted></video>
+                <button class="playbtn" onclick="playVideo();"></button>
+                <video id="actvideo" src="../webmaterial/video.mp4" loop controls></video>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

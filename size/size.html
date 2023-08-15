@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>暮光資城</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        img{
+            display: flex;
+            position: absolute;
+            left: 5vw;
+            justify-content: center;
+            align-items: center;
+            width: 90vw;
+            /* height: 60vh; */
+            top: 35vh;
+            background-size: cover;
+        }
+        /* 電腦狀態 */
+        @media screen and (min-width: 1200px) {
+            img{
+                height: 60vh;
+                width: 80vw;
+                left: 10vw;
+                top: 20vh;
+                background-size: cover;
+            }
+        } 
+    </style>
+</head>
+<body>
+    <div>
+        <a href="../Signup/signup.html">
+            <img src="../webmaterial/size.jpg" alt="Size Chart">
+        </a>
+    </div>
+</body>
+</html>
