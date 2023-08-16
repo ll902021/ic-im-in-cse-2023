@@ -372,7 +372,7 @@ input{
     display: none;
 }
 /* 手機狀態 */
-@media screen and (min-width: 375px) and (max-width: 767px) {
+@media screen and (min-width: 360px) and (max-width: 767px) {
     #pphone {
         display: block;
     }
