@@ -42,7 +42,9 @@ body {
     flex-direction: column;
     /* font-family: 'Shippori Mincho', serif; */
     font-family: 'Klee One', cursive;
-
+    /* text-shadow:
+    -1px 0 black, 0 1px black,
+    1px 0 black, 0 -1px black; */
 }
 .first{
     display: flex;
@@ -185,7 +187,7 @@ a{
     font-size: 40px;
 }
 #computer p,#pphone p{
-    color: red;
+    color: #ffef13;
 }
 .leave button{
     outline-style: none;
@@ -277,7 +279,9 @@ input{
     flex-direction: column;
     /* font-family: 'Shippori Mincho', serif; */
     font-family: 'Klee One', cursive;
-
+    /* text-shadow:
+    -1px 0 black, 0 1px black,
+    1px 0 black, 0 -1px black; */
 }
 .ffirst{
     display: flex;
@@ -374,9 +378,9 @@ input{
     }
     .fform{
         height: 90vh;
-        width: 90vw;
+        width: 95vw;
         top: 5vh;
-        left:5vw;
+        left:2.5vw;
         padding: 25px 20px;
     }
     #pphone #submit{

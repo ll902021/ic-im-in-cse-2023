@@ -3,16 +3,34 @@
     padding: 0;
     box-sizing: border-box;
 }
-.header{
+header{
     display: flex;
     position: relative;
     flex-direction: column;
     width: 100vw;
     height: 18vh;
     background-color: #000d1e;
+    /* justify-content: center;
+    align-items: center; */
+    color: #fbf1e5;
+}
+.ins{
+    display: flex;
+    position: absolute;
+    height: 9vh;
+    top: 4.5vh;
+    right: 6vw;
+}
+.header{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    height: 18vh;
+    width: 54vw;
+    left: 23vw;
+    color: #fbf1e5;
     justify-content: center;
     align-items: center;
-    color: #fbf1e5;
 }
 .title{
     font-size: 23px;
@@ -29,16 +47,9 @@
 .one h1,.two h1,.three h1,.four h1,.five h1{
     position:absolute;
     text-decoration: none;
-    /* text-shadow:
-    5px 5px 0 #000,
-    -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000; */
     text-shadow:
     -1px 0 black, 0 1px black,
     1px 0 black, 0 -1px black;
-    /* text-shadow: 1px 1px white, -1px -1px #444; */
     color:#ffffff;
     ;
 }
@@ -46,17 +57,18 @@
     background-image: url(../webmaterial/1.jpg)
 }
 #computer .two{
-    background-image: url(../webmaterial/2.png)
+    background-image: url(../webmaterial/2.jpg)
 }
 #computer .three{
-    background-image: url(../webmaterial/3.png)
+    background-image: url(../webmaterial/4.jpg)
 }
 #computer .four{
-    background-image: url(../webmaterial/4.jpg)
+    background-image: url(../webmaterial/3.jpg)
 }
 #computer .five{
     background-image: url(../webmaterial/5.jpg)
 }
+
 #phone .one{
     background-image: url(../webmaterial/phonebg/6.png)
 }
@@ -64,7 +76,7 @@
     background-image: url(../webmaterial/phonebg/7.jpg)
 }
 #phone .three{
-    background-image: url(../webmaterial/phonebg/9.jpg)
+    background-image: url(../webmaterial/4.jpg)
 }
 #phone .four{
     background-image: url(../webmaterial/phonebg/8.jpg)
@@ -88,7 +100,7 @@ a{
     position: relative;
     flex-direction: column;
     width: 100vw;
-    height: 82vh;
+    height: 75vh;
     background-color: whitesmoke;
 }
 #phone .one,#phone .two,#phone .three,#phone .four,#phone .five{
@@ -99,8 +111,8 @@ a{
     color: #ffef13;
 }
 #computer .one,#computer .two,#computer .three,#computer .four,#computer .five{
-    opacity:0.6;
-    font-size: 15px;
+    opacity:0.7;
+    font-size: 15px; 
 }
 .one,.two,.three,.four,.five{
     display: flex;
@@ -110,7 +122,6 @@ a{
     align-items: center;
     background-size: cover;
     font-family: 'Shippori Mincho', serif;
-    /* font-family: 'Klee One', cursive; */
     font-weight: bold;
 }
 #computer{
@@ -118,11 +129,23 @@ a{
     position: relative;
     flex-direction: row;
     width: 100vw;
-    height: 82vh;
+    height: 75vh;
 }
 #phone{
     opacity:1.0;
     display: none;
+}
+footer{
+    display: flex;
+    position: relative;
+    background-color: #000d1e;
+    justify-content: center;
+    align-items: center;
+    color: #fbf1e5;
+    width: 100vw;
+    height: 7vh;
+    font-family: 'Klee One', cursive;
+
 }
 @media screen and (min-width: 320px) and (max-width: 799px) {
     #phone {
@@ -132,17 +155,27 @@ a{
         display: none;
     }
     .title{
-        font-size: 30px;
+        font-size: 25px;
+    }
+    .ins{
+        height: 5vh;
+        top: 11vh;
+        right: 5vw;
     }
 }
 @media screen and (min-width: 800px) and (max-width: 1200px) {
     #phone {
         display: block;
-      }
-      #computer{
-          display: none;
-      }
-      .title{
-          font-size: 30px;
-      }
+    }
+    #computer{
+        display: none;
+    }
+    .title{
+        font-size: 30px;
+    }
+    .ins{
+        height: 9vh;
+        top: 4.5vh;
+        right: 6vw;
+    }
 }

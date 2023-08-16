@@ -110,7 +110,7 @@ button{
         width: 15vw;
         height: 15vw;
         right: 5vw;
-        top: calc((100vh - 81vw) / 2 - 70px);
+        top: calc((100vh - 81vw) / 2 - 100px);
     }
 }
 /* 平板狀態 */
@@ -123,7 +123,7 @@ button{
         width: 12vw;
         height: 12vw;
         right: 5vw;
-        top: calc((100vh - 81vw) / 2 - 130px);
+        top: calc((100vh - 81vw) / 2 - 150px);
     }
 }
 /* 電腦狀態 */
