@@ -21,15 +21,15 @@ const app = initializeApp(firebaseConfig);
 function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation) {
   const db = getDatabase();
   set(ref(db, `/${id}` + name), {
-    性別: sex,
-    葷素: food,
-    身分證字號: idcard,
-    生日: birth,
-    聯絡電話: phone,
-    尺寸: size,
-    緊急聯絡人姓名: emgname,
-    緊急聯絡人電話: emgphone,
-    緊急聯絡人關係: relation
+    sex: sex,
+    food: food,
+    idcard: idcard,
+    birth: birth,
+    phone: phone,
+    size: size,
+    emgname: emgname,
+    emgphone: emgphone,
+    realtion: relation
   })
 
   .then(function () {
