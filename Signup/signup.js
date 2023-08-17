@@ -9,13 +9,13 @@ alert('有載入js');
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-  databaseURL: process.env.FIREBAS_DATABASE_URL,
-  projectId: process.env.FIREBASE_PROJECT_ID,
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.FIREBASE_MESSAGINGSENDER_ID,
-  appId: process.env.FIREBASE_APPID
+  apiKey: "AIzaSyD6htxCy7CxDOaP_woenezkEKoOX3o6d1E",
+  authDomain: "ic-im-in-cse-2023.firebaseapp.com",
+  databaseURL: "https://ic-im-in-cse-2023-default-rtdb.firebaseio.com",
+  projectId: "ic-im-in-cse-2023",
+  storageBucket: "ic-im-in-cse-2023.appspot.com",
+  messagingSenderId: "589513037614",
+  appId: "1:589513037614:web:d38e85f91294bf6819ccbf"
 };
 
 // Initialize Firebase
