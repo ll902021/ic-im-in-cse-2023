@@ -41,7 +41,7 @@ function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname,
   
 }
 
-document.getElementById('form').onsubmit = function() {processFormData()};
+//document.getElementById('form').onsubmit = function() {processFormData()};
 function processFormData(){
   const formElement = document.getElementById('form');
   const name = formElement[0].value;
@@ -59,4 +59,6 @@ function processFormData(){
   writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation);
 
   window.location.href="../web_index/webindex.html";
+
+  return false;
 }
