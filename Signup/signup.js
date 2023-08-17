@@ -18,7 +18,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 //const db = getDatabase(app);
 
-function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation) {
+export function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation) {
   const db = getDatabase();
   set(ref(db, `/${id}` + name), {
     sex: sex,
@@ -47,7 +47,7 @@ document.getElementById("form").addEventListener("submit", function(event) {
   processFormData();
 });
 
-function processFormData(){
+export function processFormData(){
   alert("到底？？");
   const formElement = document.getElementById('form');
   const name = formElement[0].value;
