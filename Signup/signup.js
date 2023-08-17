@@ -1,6 +1,6 @@
 alert('有載入js 1');
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
 
 // import { initializeApp } from './firebase/app';
 // import { getDatabase } from "./firebase/database";
@@ -18,13 +18,13 @@ const firebaseConfig = {
   appId: "1:589513037614:web:d38e85f91294bf6819ccbf"
 };
 
-//firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-//var db = firebase.database();
+//const app = initializeApp(firebaseConfig);
+var db = firebase.database();
 
-app.ref("/chinese/Bob").set({
+db.ref("/chinese/Bob").set({
   grade: 80
 })
 .then(function () {
