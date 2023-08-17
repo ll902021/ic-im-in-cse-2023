@@ -25,11 +25,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-db.ref("/chinese/Bob").set({
-  grade: 80
-})
-.then(function () {
-  alert("建立成功");
-}).catch(function () {
-  alert("伺服器發生錯誤，請稍後再試");
-});
+function writeUserData(userId, name, email, imageUrl) {
+  const db = getDatabase();
+  set(ref(db, 'users/' + userId), {
+    username: name,
+    email: email,
+    profile_picture : imageUrl
+  });
+}
+
+writeUserData("a","b","c","d");
