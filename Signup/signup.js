@@ -30,7 +30,15 @@ function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname,
     緊急聯絡人姓名: emgname,
     緊急聯絡人電話: emgphone,
     緊急聯絡人關係: relation
-  });
+  })
+  
+  .then(function () {
+    alert("建立成功");
+  }).catch(function () {
+    alert("伺服器發生錯誤，請稍後再試");
+});
+
+  
 }
 
 function processFormData(){
