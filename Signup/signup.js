@@ -38,14 +38,11 @@ const database = getDatabase(app);
 
 import { getDatabase, ref, set } from "firebase/database";
 
-function writeUserData(userId, name, email, imageUrl) {
-  //const db = getDatabase();
-  set(ref(database, 'users/' + userId), {
-    username: name,
-    email: email,
-    profile_picture : imageUrl
-  });
-}
-
-writeUserData("a", "b", "c", "d");
-//database.ref('/').set({a:123});
+database.ref("/chinese/Bob").set({
+  grade: 80
+})
+.then(function () {
+  alert("建立成功");
+}).catch(function () {
+  alert("伺服器發生錯誤，請稍後再試");
+});
