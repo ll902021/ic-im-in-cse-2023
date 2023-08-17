@@ -18,13 +18,13 @@ const firebaseConfig = {
   appId: "1:589513037614:web:d38e85f91294bf6819ccbf"
 };
 
-firebase.initializeApp(firebaseConfig);
+//firebase.initializeApp(firebaseConfig);
 
 // Initialize Firebase
-//const app = initializeApp(firebaseConfig);
-var db = firebase.database();
+const app = initializeApp(firebaseConfig);
+//var db = firebase.database();
 
-db.ref("/chinese/Bob").set({
+app.ref("/chinese/Bob").set({
   grade: 80
 })
 .then(function () {
