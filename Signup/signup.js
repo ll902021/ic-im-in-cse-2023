@@ -1,7 +1,7 @@
 alert('有載入js 1');
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
 
 // import { initializeApp } from './firebase/app';
 // import { getDatabase } from "./firebase/database";
@@ -23,9 +23,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-//var db = firebase.database();
+const db = getDatabase(app);
 
-app.ref("/chinese/Bob").set({
+db.ref("/chinese/Bob").set({
   grade: 80
 })
 .then(function () {
