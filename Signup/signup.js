@@ -42,6 +42,11 @@ function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname,
 }
 
 //document.getElementById('form').onsubmit = function() {processFormData()};
+document.getElementById("form").addEventListener("submit", function(event) {
+  event.preventDefault(); // 阻止默认的表单提交行为
+  processFormData();
+});
+
 function processFormData(){
   alert("到底？？");
   const formElement = document.getElementById('form');
@@ -60,6 +65,4 @@ function processFormData(){
   writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation);
 
   window.location.href="../web_index/webindex.html";
-
-  return false;
 }
