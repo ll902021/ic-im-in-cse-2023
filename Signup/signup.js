@@ -31,7 +31,7 @@ function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname,
     緊急聯絡人電話: emgphone,
     緊急聯絡人關係: relation
   })
-  
+
   .then(function () {
     alert("建立成功");
   }).catch(function () {
@@ -41,7 +41,7 @@ function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname,
   
 }
 
-function processFormData(){
+document.getElementById('form').onsubmit = function processFormData(){
   const formElement = document.getElementById('form');
   const name = formElement[0].value;
   const id = formElement[1].value;
@@ -56,4 +56,6 @@ function processFormData(){
   const relation = formElement[10].value;
 
   writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation);
+
+  window.location.href="../web_index/webindex.html";
 }
