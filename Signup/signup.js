@@ -18,9 +18,11 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
+alert("有載入2");
 
 //document.getElementById('form').onsubmit = function() {processFormData()};
 document.getElementById("form").addEventListener("submit", function(event) {
+  alert("有載入3");
   event.preventDefault(); // 阻止默认的表单提交行为
   processFormData();
 });
@@ -47,6 +49,7 @@ function processFormData(){
 
 
 function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation) {
+  alert("有載入4");
   const db = getDatabase();
   set(ref(db, `/${id}` + name), {
     sex: sex,
