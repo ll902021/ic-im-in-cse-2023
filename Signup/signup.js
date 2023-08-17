@@ -43,6 +43,7 @@ function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname,
 
 //document.getElementById('form').onsubmit = function() {processFormData()};
 function processFormData(){
+  alert("到底？？");
   const formElement = document.getElementById('form');
   const name = formElement[0].value;
   const id = formElement[1].value;
