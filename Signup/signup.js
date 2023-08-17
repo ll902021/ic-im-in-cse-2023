@@ -1,6 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
 
+alert("有載入");
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -16,7 +17,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-//const db = getDatabase(app);
 
 
 //document.getElementById('form').onsubmit = function() {processFormData()};
