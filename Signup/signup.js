@@ -41,7 +41,8 @@ function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname,
   
 }
 
-document.getElementById('form').onsubmit = function processFormData(){
+document.getElementById('form').onsubmit = function() {processFormData()};
+function processFormData(){
   const formElement = document.getElementById('form');
   const name = formElement[0].value;
   const id = formElement[1].value;
