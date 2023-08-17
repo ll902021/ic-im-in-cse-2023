@@ -21,11 +21,11 @@ const app = initializeApp(firebaseConfig);
 alert("有載入2");
 
 //document.getElementById('form').onsubmit = function() {processFormData()};
-document.getElementById("form").addEventListener("submit", function(event) {
-  alert("有載入3");
-  event.preventDefault(); // 阻止默认的表单提交行为
-  processFormData();
-});
+// document.getElementById("form").addEventListener("submit", function(event) {
+//   alert("有載入3");
+//   event.preventDefault(); // 阻止默认的表单提交行为
+//   processFormData();
+// });
 
 function processFormData(){
   alert("到底？？");
@@ -45,6 +45,8 @@ function processFormData(){
   writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation);
 
   window.location.href="../web_index/webindex.html";
+
+  return true;
 }
 
 

@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Yuji+Boku&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Shippori+Mincho:wght@600&family=Yuji+Boku&display=swap" rel="stylesheet">
-    <script type="module" src='signup.js'></script>
+    <script type="module" src='./signup.js'></script>
 </head>
 <body>
     <div class="showcase">
@@ -94,7 +94,7 @@
                     <h3>關係Relationship:</h3><input type="text" name="relation" placeholder="父子" id="relation" required />
                 </div>
             </div>
-            <input type="submit" value="提交Submit" id="submit">
+            <input type="submit" value="提交Submit" id="submit" onclick="return processFormData();" />
         </form>
         </div>
 
@@ -180,7 +180,7 @@
                         <h3>關係Relationship:</h3><input type="text" name="relation" placeholder="父子" id="rrelation" required />
                     </div>
                 </div>
-                <input type="submit" value="提交Submit" id="submit">
+                <input type="submit" value="提交Submit" id="submit" onclick="return processFormData();" />
             </form>
         </div>
     </div>
