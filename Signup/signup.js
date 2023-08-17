@@ -1,33 +1,15 @@
-// const firebaseConfig = {
-//     apiKey: "AIzaSyD6htxCy7CxDOaP_woenezkEKoOX3o6d1E",
-//     authDomain: "ic-im-in-cse-2023.firebaseapp.com",
-//     databaseURL: "https://ic-im-in-cse-2023-default-rtdb.firebaseio.com",
-//     projectId: "ic-im-in-cse-2023",
-//     storageBucket: "ic-im-in-cse-2023.appspot.com",
-//     messagingSenderId: "589513037614",
-//     appId: "1:589513037614:web:d38e85f91294bf6819ccbf"
-//   };
-
-//   const app = initializeApp(firebaseConfig);
-
-//   const database = firebase.database();
-
-//   database.ref('/').set({a:123});
-
-
-
 import { initializeApp } from 'firebase/app';
 import { getDatabase } from "firebase/database";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD6htxCy7CxDOaP_woenezkEKoOX3o6d1E",
-  authDomain: "ic-im-in-cse-2023.firebaseapp.com",
-  databaseURL: "https://ic-im-in-cse-2023-default-rtdb.firebaseio.com",
-  projectId: "ic-im-in-cse-2023",
-  storageBucket: "ic-im-in-cse-2023.appspot.com",
-  messagingSenderId: "589513037614",
-  appId: "1:589513037614:web:d38e85f91294bf6819ccbf"
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.FIREBAS_DATABASE_URL,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGINGSENDER_ID,
+  appId: process.env.FIREBASE_APPID
 };
 
 // Initialize Firebase
@@ -35,14 +17,9 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
 
+function saveDataToFirebase(data) {
+  const newDataRef = database.ref('data').push();
+  newDataRef.set(data);
+}
 
-import { getDatabase, ref, set } from "firebase/database";
-
-database.ref("/chinese/Bob").set({
-  grade: 80
-})
-.then(function () {
-  alert("建立成功");
-}).catch(function () {
-  alert("伺服器發生錯誤，請稍後再試");
-});
+saveDataToFirebase({ name: 'John', age: 30 });
