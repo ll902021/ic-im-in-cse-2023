@@ -1,5 +1,7 @@
-import { initializeApp } from 'firebase/app';
-import { getDatabase } from "firebase/database";
+alert('有載入js 1');
+
+import { initializeApp } from './firebase/app';
+import { getDatabase } from "./firebase/database";
 
 alert('有載入js');
 
