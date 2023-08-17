@@ -1,6 +1,6 @@
 alert('有載入js 1');
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase.js";
 
 // import { initializeApp } from './firebase/app';
 // import { getDatabase } from "./firebase/database";
