@@ -1,6 +1,6 @@
 alert('有載入js 1');
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
 
 // import { initializeApp } from './firebase/app';
 // import { getDatabase } from "./firebase/database";
@@ -18,14 +18,17 @@ const firebaseConfig = {
   appId: "1:589513037614:web:d38e85f91294bf6819ccbf"
 };
 
+firebase.initializeApp(firebaseConfig);
+
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
+//const app = initializeApp(firebaseConfig);
+var db = firebase.database();
 
-
-function saveDataToFirebase(data) {
-  const newDataRef = database.ref('data').push();
-  newDataRef.set(data);
-}
-
-saveDataToFirebase({ name: 'John', age: 30 });
+db.ref("/chinese/Bob").set({
+  grade: 80
+})
+.then(function () {
+  alert("建立成功");
+}).catch(function () {
+  alert("伺服器發生錯誤，請稍後再試");
+});
