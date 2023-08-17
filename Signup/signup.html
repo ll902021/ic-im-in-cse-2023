@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Yuji+Boku&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Shippori+Mincho:wght@600&family=Yuji+Boku&display=swap" rel="stylesheet">
+    <script type="module" src='./signup.js'></script>
 </head>
 <body>
     <div class="showcase">
@@ -20,7 +21,7 @@
                 <h2>報名表</h2>
                 <button><p><a href="../web_index/webindex.html">×</a></p></button>
             </div>
-            <p>※報名費為 1500 元，現場繳交，含餐費、營服、保險。晚會需穿制服。</p>
+            <p>※報名費為 1500 元，現場繳交，含餐費、營服、保險</p>
             <div class="first">
                 <div class="name">
                     <h3>姓名Name:</h3><input type="text" name="name" placeholder="曾X錢" id="name" required />
@@ -46,7 +47,7 @@
             <div class="second">
                 <div class="idcard">
                     <h3>身分證字號/Residence NO./Passport NO. (保險用)</h3>
-                    <input type="text" name="idcard" placeholder="A123456789" id="idcard" maxlength="10" required />
+                    <input type="text" name="idcard" placeholder="A123456789" id="idcard" required />
                 </div>
             </div>
             <div class="first">
@@ -103,7 +104,7 @@
                     <h2>報名表</h2>
                     <button><p><a href="../web_index/webindex.html">×</a></p></button>
                 </div>
-                <p>※報名費為 1500 元，現場繳交<br>含餐費、營服、保險。晚會需穿制服</p>
+                <p>※報名費為 1500 元，現場繳交<br>含餐費、營服、保險</p>
                 <div class="ffirst">
                     <div class="nname">
                         <h3>姓名Name:</h3><input type="text" name="name" placeholder="曾X錢" id="nname" required />
@@ -183,5 +184,9 @@
             </form>
         </div>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase.js"></script>
+    
 </body>
 </html>
