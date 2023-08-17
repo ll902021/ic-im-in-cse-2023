@@ -18,7 +18,35 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 //const db = getDatabase(app);
 
-export function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation) {
+
+//document.getElementById('form').onsubmit = function() {processFormData()};
+document.getElementById("form").addEventListener("submit", function(event) {
+  event.preventDefault(); // 阻止默认的表单提交行为
+  processFormData();
+});
+
+function processFormData(){
+  alert("到底？？");
+  const formElement = document.getElementById('form');
+  const name = formElement[0].value;
+  const id = formElement[1].value;
+  const sex = formElement[2].value;
+  const food = formElement[3].value;
+  const idcard = formElement[4].value;
+  const birth = formElement[5].value;
+  const phone = formElement[6].value;
+  const size = formElement[7].value;
+  const emgname = formElement[8].value;
+  const emgphone = formElement[9].value;
+  const relation = formElement[10].value;
+
+  writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation);
+
+  window.location.href="../web_index/webindex.html";
+}
+
+
+function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation) {
   const db = getDatabase();
   set(ref(db, `/${id}` + name), {
     sex: sex,
@@ -37,32 +65,4 @@ export function writeUserData(name, id, sex, food, idcard, birth, phone, size, e
   }).catch(function () {
     alert("伺服器發生錯誤，請稍後再試");
 });
-
-  
-}
-
-//document.getElementById('form').onsubmit = function() {processFormData()};
-document.getElementById("form").addEventListener("submit", function(event) {
-  event.preventDefault(); // 阻止默认的表单提交行为
-  processFormData();
-});
-
-export function processFormData(){
-  alert("到底？？");
-  const formElement = document.getElementById('form');
-  const name = formElement[0].value;
-  const id = formElement[1].value;
-  const sex = formElement[2].value;
-  const food = formElement[3].value;
-  const idcard = formElement[4].value;
-  const birth = formElement[5].value;
-  const phone = formElement[6].value;
-  const size = formElement[7].value;
-  const emgname = formElement[8].value;
-  const emgphone = formElement[9].value;
-  const relation = formElement[10].value;
-
-  writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation);
-
-  window.location.href="../web_index/webindex.html";
 }
