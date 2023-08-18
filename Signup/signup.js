@@ -57,17 +57,35 @@ function processFormData1(){
 function processFormData2(){
   alert("到底？？2");
   var form = document.getElementById('form2');
+
+  for(var i=0; i<form.length;i++){
+    alert(form[i]);
+  }
+
   const name = form.name.value;
+  alert("name:"+name);
   const id = form.id.value;
+  alert("id:"+id);
   const sex = document.querySelector('input[name="sex"]:checked').value;
+  alert("sex:"+sex);
   const food = document.querySelector('input[name="food"]:checked').value;
+  alert("food:"+food);
   const idcard = form.idcrad.value;
+  alert("idcard:"+idcard);
   const birth = form.birth.value;
+  alert("birth:"+birth);
   const phone = form.phone.value;
+  alert("phone:"+phone);
   const size = form.size.value;
+  alert("size:"+size);
   const emgname = form.emgname.value;
+  alert("emgname:"+emgname);
   const emgphone = form.emgphone.value;
+  alert("emgphone:"+emgphone);
   const relation = form.realtion.value;
+  alert("relation:"+relation);
+
+  
 
   writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation);
 
