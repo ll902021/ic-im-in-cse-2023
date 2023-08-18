@@ -38,17 +38,17 @@ function start(){
 function processFormData1(){
   alert("到底？？");
   const formElement = document.getElementById('form1');
-  const name = doucumect.getElementByName('name').value;
-  const id = doucumect.getElementByName('id').value;
-  const sex = doucumect.getElementByName('sex').value;
-  const food = doucumect.getElementByName('food').value;
-  const idcard = doucumect.getElementByName('idcard').value;
-  const birth = doucumect.getElementByName('birth').value;
-  const phone = doucumect.getElementByName('phone').value;
-  const size = doucumect.getElementByName('size').value;
-  const emgname = doucumect.getElementByName('emgname').value;
-  const emgphone = doucumect.getElementByName('emgphone').value;
-  const relation = doucumect.getElementByName('relation').value;
+  const name = doucumect.getElementById('name').value;
+  const id = doucumect.getElementById('id').value;
+  const sex = document.querySelector('input[name="sex"]:checked').value;
+  const food = document.querySelector('input[name="food"]:checked').value;
+  const idcard = doucumect.getElementById('idcard').value;
+  const birth = doucumect.getElementById('birth').value;
+  const phone = doucumect.getElementById('phone').value;
+  const size = doucumect.getElementById('size').value;
+  const emgname = doucumect.getElementById('emgname').value;
+  const emgphone = doucumect.getElementById('emgphone').value;
+  const relation = doucumect.getElementById('relation').value;
 
   writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation);
 
@@ -57,17 +57,17 @@ function processFormData1(){
 function processFormData2(){
   alert("到底？？");
   const formElement = document.getElementById('form2');
-  const name = doucumect.getElementByName('name').value;
-  const id = doucumect.getElementByName('id').value;
-  const sex = doucumect.getElementByName('sex').value;
-  const food = doucumect.getElementByName('food').value;
-  const idcard = doucumect.getElementByName('idcard').value;
-  const birth = doucumect.getElementByName('birth').value;
-  const phone = doucumect.getElementByName('phone').value;
-  const size = doucumect.getElementByName('size').value;
-  const emgname = doucumect.getElementByName('emgname').value;
-  const emgphone = doucumect.getElementByName('emgphone').value;
-  const relation = doucumect.getElementByName('relation').value;
+  const name = doucumect.getElementById('nname').value;
+  const id = doucumect.getElementById('iid').value;
+  const sex = document.querySelector('input[name="sex"]:checked').value;
+  const food = document.querySelector('input[name="food"]:checked').value;
+  const idcard = doucumect.getElementById('iidcard').value;
+  const birth = doucumect.getElementById('bbirth').value;
+  const phone = doucumect.getElementById('ppphone').value;
+  const size = doucumect.getElementById('ssize').value;
+  const emgname = doucumect.getElementById('emgnname').value;
+  const emgphone = doucumect.getElementById('emgppphone').value;
+  const relation = doucumect.getElementById('rrelation').value;
 
   writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation);
 
