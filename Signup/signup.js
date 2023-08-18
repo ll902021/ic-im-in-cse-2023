@@ -36,38 +36,38 @@ function start(){
 
 
 function processFormData1(){
-  alert("到底？？");
-  const formElement = document.getElementById('form1');
-  const name = formElement[0].value;
-  const id = formElement[1].value;
-  const sex = formElement[2].value;
-  const food = formElement[3].value;
-  const idcard = formElement[4].value;
-  const birth = formElement[5].value;
-  const phone = formElement[6].value;
-  const size = formElement[7].value;
-  const emgname = formElement[8].value;
-  const emgphone = formElement[9].value;
-  const relation = formElement[10].value;
+  alert("到底？？1");
+  var form = document.getElementById('form1');
+  const name = form.name.value;
+  const id = form.id.value;
+  const sex = document.querySelector('input[name="sex"]:checked').value;
+  const food = document.querySelector('input[name="food"]:checked').value;
+  const idcard = form.idcrad.value;
+  const birth = form.birth.value;
+  const phone = form.phone.value;
+  const size = form.size.value;
+  const emgname = form.emgname.value;
+  const emgphone = form.emgphone.value;
+  const relation = form.realtion.value;
 
   writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation);
 
 }
 
 function processFormData2(){
-  alert("到底？？");
-  const formElement = document.getElementById('form2');
-  const name = formElement[0].value;
-  const id = formElement[1].value;
-  const sex = formElement[2].value;
-  const food = formElement[3].value;
-  const idcard = formElement[4].value;
-  const birth = formElement[5].value;
-  const phone = formElement[6].value;
-  const size = formElement[7].value;
-  const emgname = formElement[8].value;
-  const emgphone = formElement[9].value;
-  const relation = formElement[10].value;
+  alert("到底？？2");
+  var form = document.getElementById('form2');
+  const name = form.name.value;
+  const id = form.id.value;
+  const sex = document.querySelector('input[name="sex"]:checked').value;
+  const food = document.querySelector('input[name="food"]:checked').value;
+  const idcard = form.idcrad.value;
+  const birth = form.birth.value;
+  const phone = form.phone.value;
+  const size = form.size.value;
+  const emgname = form.emgname.value;
+  const emgphone = form.emgphone.value;
+  const relation = form.realtion.value;
 
   writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation);
 
@@ -90,12 +90,13 @@ function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname,
   })
 
   .then(function () {
-    alert("建立成功");
+    alert("報名成功");
+    window.location.href="../web_index/webindex.html";
   }).catch(function () {
     alert("伺服器發生錯誤，請稍後再試");
 });
 
 
 }
-//window.location.href="../web_index/webindex.html";
+
 window.addEventListener("load", start, false);
