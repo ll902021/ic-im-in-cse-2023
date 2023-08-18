@@ -58,7 +58,7 @@ function processFormData1(){
 
 function processFormData2(){
   alert("到底？？");
-  const formElement = document.getElementById('form1');
+  const formElement = document.getElementById('form2');
   const name = formElement[0].value;
   const id = formElement[1].value;
   const sex = formElement[2].value;
