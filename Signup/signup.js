@@ -1,8 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
 
-alert("有載入");
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyD6htxCy7CxDOaP_woenezkEKoOX3o6d1E",
@@ -18,10 +16,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-alert("有載入2");
 
 function start(){
-  alert("有載入3");
   //document.getElementById('form').onsubmit = function() {processFormData()};
   document.getElementById("form1").addEventListener("submit", function(event) {
     event.preventDefault(); // 阻止默认的表单提交行为
@@ -36,56 +32,39 @@ function start(){
 
 
 function processFormData1(){
-  alert("到底？？1");
   var form = document.getElementById('form1');
+
   const name = form.name.value;
   const id = form.id.value;
   const sex = document.querySelector('input[name="sex"]:checked').value;
   const food = document.querySelector('input[name="food"]:checked').value;
-  const idcard = form.idcrad.value;
+  const idcard = form.idcard.value;
   const birth = form.birth.value;
   const phone = form.phone.value;
   const size = form.size.value;
   const emgname = form.emgname.value;
   const emgphone = form.emgphone.value;
-  const relation = form.realtion.value;
+  const relation = form.relation.value;
 
   writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation);
 
 }
 
 function processFormData2(){
-  alert("到底？？2");
   var form = document.getElementById('form2');
 
-  for(var i=0; i<form.length;i++){
-    alert(form[i].value);
-  }
-
   const name = form.name.value;
-  alert("name:"+name);
   const id = form.id.value;
-  alert("id:"+id);
   const sex = document.querySelector('input[name="sex"]:checked').value;
-  alert("sex:"+sex);
   const food = document.querySelector('input[name="food"]:checked').value;
-  alert("food:"+food);
   const idcard = form.idcard.value;
-  alert("idcard:"+idcard);
   const birth = form.birth.value;
-  alert("birth:"+birth);
   const phone = form.phone.value;
-  alert("phone:"+phone);
   const size = form.size.value;
-  alert("size:"+size);
   const emgname = form.emgname.value;
-  alert("emgname:"+emgname);
   const emgphone = form.emgphone.value;
-  alert("emgphone:"+emgphone);
   const relation = form.relation.value;
-  alert("relation:"+relation);
 
-  
 
   writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation);
 
@@ -93,7 +72,6 @@ function processFormData2(){
 
 
 function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation) {
-  alert("有載入4");
   const db = getDatabase();
   set(ref(db, `/${id}` + name), {
     性別: sex,
@@ -113,7 +91,6 @@ function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname,
   }).catch(function () {
     alert("伺服器發生錯誤，請稍後再試");
 });
-
 
 }
 
