@@ -63,7 +63,21 @@ function processFormData2(){
   const name = form.name.value;
   const id = form.id.value;
   const sex = document.querySelector('input[name="sex"]:checked').value;
+
+  if(sex==="girl"){
+    var newsex = "女";
+  }else if(sex==="boy"){
+    var newsex = "男";
+  }
+
   const food = document.querySelector('input[name="food"]:checked').value;
+
+  if(food==="meat"){
+    var newfood = "葷";
+  }else if (food==="veg"){
+    var newfood = "素";
+  }
+
   const idcard = form.idcard.value;
   const birth = form.birth.value;
 
@@ -80,7 +94,7 @@ function processFormData2(){
   const relation = form.relation.value;
 
 
-  writeUserData(name, id, sex, food, idcard, newbirth, phone, size, emgname, emgphone, relation);
+  writeUserData(name, id, newsex, newfood, idcard, newbirth, phone, size, emgname, emgphone, relation);
 
 }
 
@@ -101,6 +115,18 @@ function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname,
 
   .then(function () {
     alert("報名成功");
+    alert("請確認以下資訊是否正確\n 學號："+id+
+    "\n 姓名："+name+
+    "\n 性別："+sex+
+    "\n 葷素："+food+
+    "\n 身分證字號："+idcard+
+    "\n 生日(民國)："+birth+
+    "\n 聯絡電話："+phone+
+    "\n 衣服尺寸："+size+
+    "\n 緊急聯絡人姓名："+emgname+
+    "\n 緊急聯絡人電話："+emgphone+
+    "\n 與緊急聯絡人關係："+relation+
+    "\n若發現以上資訊有誤，直接再重新填一次表單即可");
     window.location.href="../web_index/webindex.html";
   }).catch(function () {
     alert("伺服器發生錯誤，請稍後再試");
