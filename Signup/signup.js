@@ -18,7 +18,6 @@ const app = initializeApp(firebaseConfig);
 
 
 function start(){
-  //document.getElementById('form').onsubmit = function() {processFormData()};
   document.getElementById("form1").addEventListener("submit", function(event) {
     event.preventDefault(); // 阻止默认的表单提交行为
     processFormData1();
