@@ -82,7 +82,7 @@ function processFormData2(){
   alert("emgname:"+emgname);
   const emgphone = form.emgphone.value;
   alert("emgphone:"+emgphone);
-  const relation = form.realtion.value;
+  const relation = form.relation.value;
   alert("relation:"+relation);
 
   
