@@ -59,7 +59,7 @@ function processFormData2(){
   var form = document.getElementById('form2');
 
   for(var i=0; i<form.length;i++){
-    alert(form[i]);
+    alert(form[i].value);
   }
 
   const name = form.name.value;
@@ -70,7 +70,7 @@ function processFormData2(){
   alert("sex:"+sex);
   const food = document.querySelector('input[name="food"]:checked').value;
   alert("food:"+food);
-  const idcard = form.idcrad.value;
+  const idcard = form.idcard.value;
   alert("idcard:"+idcard);
   const birth = form.birth.value;
   alert("birth:"+birth);
