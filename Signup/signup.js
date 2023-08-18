@@ -38,42 +38,40 @@ function start(){
 function processFormData1(){
   alert("到底？？");
   const formElement = document.getElementById('form1');
-  const name = formElement[0].value;
-  const id = formElement[1].value;
-  const sex = formElement[2].value;
-  const food = formElement[3].value;
-  const idcard = formElement[4].value;
-  const birth = formElement[5].value;
-  const phone = formElement[6].value;
-  const size = formElement[7].value;
-  const emgname = formElement[8].value;
-  const emgphone = formElement[9].value;
-  const relation = formElement[10].value;
+  const name = doucumect.getElementByName('name').value;
+  const id = doucumect.getElementByName('id').value;
+  const sex = doucumect.getElementByName('sex').value;
+  const food = doucumect.getElementByName('food').value;
+  const idcard = doucumect.getElementByName('idcard').value;
+  const birth = doucumect.getElementByName('birth').value;
+  const phone = doucumect.getElementByName('phone').value;
+  const size = doucumect.getElementByName('size').value;
+  const emgname = doucumect.getElementByName('emgname').value;
+  const emgphone = doucumect.getElementByName('emgphone').value;
+  const relation = doucumect.getElementByName('relation').value;
 
   writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation);
-
-  window.location.href="../web_index/webindex.html";
 
 }
 
 function processFormData2(){
   alert("到底？？");
   const formElement = document.getElementById('form2');
-  const name = formElement[0].value;
-  const id = formElement[1].value;
-  const sex = formElement[2].value;
-  const food = formElement[3].value;
-  const idcard = formElement[4].value;
-  const birth = formElement[5].value;
-  const phone = formElement[6].value;
-  const size = formElement[7].value;
-  const emgname = formElement[8].value;
-  const emgphone = formElement[9].value;
-  const relation = formElement[10].value;
+  const name = doucumect.getElementByName('name').value;
+  const id = doucumect.getElementByName('id').value;
+  const sex = doucumect.getElementByName('sex').value;
+  const food = doucumect.getElementByName('food').value;
+  const idcard = doucumect.getElementByName('idcard').value;
+  const birth = doucumect.getElementByName('birth').value;
+  const phone = doucumect.getElementByName('phone').value;
+  const size = doucumect.getElementByName('size').value;
+  const emgname = doucumect.getElementByName('emgname').value;
+  const emgphone = doucumect.getElementByName('emgphone').value;
+  const relation = doucumect.getElementByName('relation').value;
 
   writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation);
 
-  window.location.href="../web_index/webindex.html";
+
 
 }
 
@@ -82,15 +80,15 @@ function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname,
   alert("有載入4");
   const db = getDatabase();
   set(ref(db, `/${id}` + name), {
-    sex: sex,
-    food: food,
-    idcard: idcard,
-    birth: birth,
-    phone: phone,
-    size: size,
-    emgname: emgname,
-    emgphone: emgphone,
-    realtion: relation
+    性別: sex,
+    葷素: food,
+    身分證字號: idcard,
+    生日: birth,
+    聯絡電話: phone,
+    尺寸: size,
+    緊急聯絡人姓名: emgname,
+    緊急聯絡人電話: emgphone,
+    與緊急聯絡人關係: relation
   })
 
   .then(function () {
@@ -98,6 +96,8 @@ function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname,
   }).catch(function () {
     alert("伺服器發生錯誤，請稍後再試");
 });
+
+  window.location.href="../web_index/webindex.html";
 }
 
 window.addEventListener("load", start, false);
