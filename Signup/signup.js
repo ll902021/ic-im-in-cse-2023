@@ -40,13 +40,20 @@ function processFormData1(){
   const food = document.querySelector('input[name="food"]:checked').value;
   const idcard = form.idcard.value;
   const birth = form.birth.value;
+
+  var parsedDate = new Date(birth);
+  var year = parsedDate.getFullYear() - 1911;
+  var month = parsedDate.getMonth() + 1; // 月份从0开始，所以要加1
+  var day = parsedDate.getDate();
+  var newbirth = year + '/' + month + '/' + day;
+
   const phone = form.phone.value;
   const size = form.size.value;
   const emgname = form.emgname.value;
   const emgphone = form.emgphone.value;
   const relation = form.relation.value;
 
-  writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation);
+  writeUserData(name, id, sex, food, idcard, newbirth, phone, size, emgname, emgphone, relation);
 
 }
 
@@ -59,6 +66,13 @@ function processFormData2(){
   const food = document.querySelector('input[name="food"]:checked').value;
   const idcard = form.idcard.value;
   const birth = form.birth.value;
+
+  var parsedDate = new Date(birth);
+  var year = parsedDate.getFullYear() - 1911;
+  var month = parsedDate.getMonth() + 1; // 月份从0开始，所以要加1
+  var day = parsedDate.getDate();
+  var newbirth = year + '/' + month + '/' + day;
+
   const phone = form.phone.value;
   const size = form.size.value;
   const emgname = form.emgname.value;
@@ -66,7 +80,7 @@ function processFormData2(){
   const relation = form.relation.value;
 
 
-  writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation);
+  writeUserData(name, id, sex, food, idcard, newbirth, phone, size, emgname, emgphone, relation);
 
 }
 
