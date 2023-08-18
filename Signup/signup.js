@@ -23,16 +23,21 @@ alert("有載入2");
 function start(){
   alert("有載入3");
   //document.getElementById('form').onsubmit = function() {processFormData()};
-  document.getElementById("form").addEventListener("submit", function(event) {
+  document.getElementById("form1").addEventListener("submit", function(event) {
     event.preventDefault(); // 阻止默认的表单提交行为
-    processFormData();
+    processFormData1();
+  });
+
+  document.getElementById("form2").addEventListener("submit", function(event) {
+    event.preventDefault(); // 阻止默认的表单提交行为
+    processFormData2();
   });
 }
 
 
-function processFormData(){
+function processFormData1(){
   alert("到底？？");
-  const formElement = document.getElementById('form');
+  const formElement = document.getElementById('form1');
   const name = formElement[0].value;
   const id = formElement[1].value;
   const sex = formElement[2].value;
@@ -49,7 +54,27 @@ function processFormData(){
 
   window.location.href="../web_index/webindex.html";
 
-  return true;
+}
+
+function processFormData2(){
+  alert("到底？？");
+  const formElement = document.getElementById('form1');
+  const name = formElement[0].value;
+  const id = formElement[1].value;
+  const sex = formElement[2].value;
+  const food = formElement[3].value;
+  const idcard = formElement[4].value;
+  const birth = formElement[5].value;
+  const phone = formElement[6].value;
+  const size = formElement[7].value;
+  const emgname = formElement[8].value;
+  const emgphone = formElement[9].value;
+  const relation = formElement[10].value;
+
+  writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname, emgphone, relation);
+
+  window.location.href="../web_index/webindex.html";
+
 }
 
 
