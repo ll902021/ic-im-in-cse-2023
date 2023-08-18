@@ -21,12 +21,12 @@ const app = initializeApp(firebaseConfig);
 alert("有載入2");
 
 function start(){
-  document.getElementById('form').onsubmit = function() {processFormData()};
-// document.getElementById("form").addEventListener("submit", function(event) {
-//   alert("有載入3");
-//   event.preventDefault(); // 阻止默认的表单提交行为
-//   processFormData();
-// });
+  alert("有載入3");
+  //document.getElementById('form').onsubmit = function() {processFormData()};
+  document.getElementById("form").addEventListener("submit", function(event) {
+    event.preventDefault(); // 阻止默认的表单提交行为
+    processFormData();
+  });
 }
 
 
