@@ -78,15 +78,15 @@ function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname,
   alert("有載入4");
   const db = getDatabase();
   set(ref(db, `/${id}` + name), {
-    sex: sex,
-    food: food,
-    idcard: idcard,
-    birth: birth,
-    phone: phone,
-    size: size,
-    emgname: emgname,
-    emgphone: emgphone,
-    relation: relation
+    性別: sex,
+    葷素: food,
+    身分證字號: idcard,
+    生日: birth,
+    聯絡電話: phone,
+    尺寸: size,
+    緊急聯絡人姓名: emgname,
+    緊急聯絡人電話: emgphone,
+    與緊急聯絡人關係: relation
   })
 
   .then(function () {
@@ -95,7 +95,7 @@ function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname,
     alert("伺服器發生錯誤，請稍後再試");
 });
 
-  window.location.href="../web_index/webindex.html";
-}
 
+}
+//window.location.href="../web_index/webindex.html";
 window.addEventListener("load", start, false);
