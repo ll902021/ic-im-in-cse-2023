@@ -52,7 +52,20 @@ function processFormData1(){
   const emgphone = form.emgphone.value;
   const relation = form.relation.value;
 
-  writeUserData(name, id, sex, food, idcard, newbirth, phone, size, emgname, emgphone, relation);
+  if (window.confirm("請確認以下資訊是否正確\n 學號："+id+
+      "\n 姓名："+name+
+      "\n 性別："+newsex+
+      "\n 葷素："+newfood+
+      "\n 身分證字號："+idcard+
+      "\n 生日(民國)："+newbirth+
+      "\n 聯絡電話："+phone+
+      "\n 衣服尺寸："+size+
+      "\n 緊急聯絡人姓名："+emgname+
+      "\n 緊急聯絡人電話："+emgphone+
+      "\n 與緊急聯絡人關係："+relation)) {
+
+        writeUserData(name, id, newsex, newfood, idcard, newbirth, phone, size, emgname, emgphone, relation);
+    }
 
 }
 
@@ -92,8 +105,20 @@ function processFormData2(){
   const emgphone = form.emgphone.value;
   const relation = form.relation.value;
 
+  if (window.confirm("請確認以下資訊是否正確\n 學號："+id+
+      "\n 姓名："+name+
+      "\n 性別："+newsex+
+      "\n 葷素："+newfood+
+      "\n 身分證字號："+idcard+
+      "\n 生日(民國)："+newbirth+
+      "\n 聯絡電話："+phone+
+      "\n 衣服尺寸："+size+
+      "\n 緊急聯絡人姓名："+emgname+
+      "\n 緊急聯絡人電話："+emgphone+
+      "\n 與緊急聯絡人關係："+relation)) {
 
-  writeUserData(name, id, newsex, newfood, idcard, newbirth, phone, size, emgname, emgphone, relation);
+        writeUserData(name, id, newsex, newfood, idcard, newbirth, phone, size, emgname, emgphone, relation);
+    }
 
 }
 
@@ -113,20 +138,8 @@ function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname,
   })
 
   .then(function () {
-    if (window.confirm("請確認以下資訊是否正確\n 學號："+id+
-      "\n 姓名："+name+
-      "\n 性別："+sex+
-      "\n 葷素："+food+
-      "\n 身分證字號："+idcard+
-      "\n 生日(民國)："+birth+
-      "\n 聯絡電話："+phone+
-      "\n 衣服尺寸："+size+
-      "\n 緊急聯絡人姓名："+emgname+
-      "\n 緊急聯絡人電話："+emgphone+
-      "\n 與緊急聯絡人關係："+relation)) {
-        alert("報名成功");
-        window.location.href="../web_index/webindex.html";
-      }
+    alert("報名成功");
+    window.location.href="../web_index/webindex.html";
   }).catch(function () {
     alert("伺服器發生錯誤，請稍後再試");
 });
