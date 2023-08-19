@@ -113,20 +113,20 @@ function writeUserData(name, id, sex, food, idcard, birth, phone, size, emgname,
   })
 
   .then(function () {
-    alert("報名成功");
-    alert("請確認以下資訊是否正確\n 學號："+id+
-    "\n 姓名："+name+
-    "\n 性別："+sex+
-    "\n 葷素："+food+
-    "\n 身分證字號："+idcard+
-    "\n 生日(民國)："+birth+
-    "\n 聯絡電話："+phone+
-    "\n 衣服尺寸："+size+
-    "\n 緊急聯絡人姓名："+emgname+
-    "\n 緊急聯絡人電話："+emgphone+
-    "\n 與緊急聯絡人關係："+relation+
-    "\n若發現以上資訊有誤，直接再重新填一次表單即可");
-    window.location.href="../web_index/webindex.html";
+    if (window.confirm("請確認以下資訊是否正確\n 學號："+id+
+      "\n 姓名："+name+
+      "\n 性別："+sex+
+      "\n 葷素："+food+
+      "\n 身分證字號："+idcard+
+      "\n 生日(民國)："+birth+
+      "\n 聯絡電話："+phone+
+      "\n 衣服尺寸："+size+
+      "\n 緊急聯絡人姓名："+emgname+
+      "\n 緊急聯絡人電話："+emgphone+
+      "\n 與緊急聯絡人關係："+relation)) {
+        alert("報名成功");
+        window.location.href="../web_index/webindex.html";
+      }
   }).catch(function () {
     alert("伺服器發生錯誤，請稍後再試");
 });
