@@ -12,20 +12,23 @@
 // });
 // 播放影片的函式
 function playVideo() {
-    var video = document.getElementById("actvideo");
+    //var video = document.getElementById("actvideo");
     var tvvideo = document.getElementById("tvvideo");
+    var startplay = document.getElementById("startplay");
 
     // 如果影片已經播放，則暫停並隱藏它
-    if (!video.paused) {
-        video.pause();
-        video.style.display = "none";
-    } else {
-        // 否則播放影片
-        video.play();
-        video.style.display = "block";
-    }
+    // if (!video.paused) {
+    //     video.pause();
+    //     video.style.display = "none";
+    // } else {
+    //     // 否則播放影片
+    //     video.play();
+    //     video.style.display = "block";
+    // }
     // 隱藏 tvvideo 影片
     tvvideo.style.display = "none";
+    startplay.style.display = "none";
+    startplay.style.zIndex = 999;
 }
 function returnbtn() {
     window.location.href = "../web_index/webindex.html";

@@ -41,7 +41,7 @@ body{
     right: 0;  
     margin: auto;
     width: 100%;
-    z-index: 998;
+    z-index: 994;
 }
 .videocase{
     display: flex;
@@ -51,6 +51,18 @@ body{
     background-color: black;
     align-items: center;
     justify-content: center;
+}
+iframe{
+    position: absolute;
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 995;
 }
 #tvvideo{
     position: absolute;
@@ -62,7 +74,7 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 997;
+    z-index: 996;
 }
 #actvideo{
     position: absolute;
@@ -73,7 +85,7 @@ body{
     margin: auto;
     width: 99%;
     background-size: cover;
-    z-index: 999;
+    z-index: 997;
 }
 .playbtn{
     display: flex;
@@ -82,7 +94,7 @@ body{
     height: 15vw;
     background: url(../webmaterial/playbtn.png);
     background-size: cover;
-    z-index: 999;
+    z-index: 998;
 }
 #actvideo{
     display: none;
