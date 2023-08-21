@@ -36,7 +36,21 @@ function processFormData1(){
   const name = form.name.value;
   const id = form.id.value;
   const sex = document.querySelector('input[name="sex"]:checked').value;
+
+  if(sex==="girl"){
+    var newsex = "女";
+  }else if(sex==="boy"){
+    var newsex = "男";
+  }
+
   const food = document.querySelector('input[name="food"]:checked').value;
+
+  if(food==="meat"){
+    var newfood = "葷";
+  }else if (food==="veg"){
+    var newfood = "素";
+  }
+  
   const idcard = form.idcard.value;
   const birth = form.birth.value;
 
