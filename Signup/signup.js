@@ -33,7 +33,8 @@ function start(){
 function processFormData1(){
   var form = document.getElementById('form1');
 
-  const name = form.name.value;
+  // const name = form.name.value;
+  const name = document.getElementById('name').value;
   const id = form.id.value;
   const sex = document.querySelector('input[name="sex"]:checked').value;
 
@@ -49,8 +50,8 @@ function processFormData1(){
     var newfood = "葷";
   }else if (food==="veg"){
     var newfood = "素";
-  }
-  
+  };
+
   const idcard = form.idcard.value;
   const birth = form.birth.value;
 
@@ -60,7 +61,8 @@ function processFormData1(){
   var day = parsedDate.getDate();
   var newbirth = year + '/' + month + '/' + day;
 
-  const phone = form.phone.value;
+  // const phone = form.phone.value;
+  const phone = document.getElementById('phone').value;
   const size = form.size.value;
   const emgname = form.emgname.value;
   const emgphone = form.emgphone.value;
