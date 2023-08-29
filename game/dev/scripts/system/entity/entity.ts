@@ -1,5 +1,7 @@
 import _entityList from "./_entityList.js";
 
+import { Game } from "../game.js";
+
 export class Entity implements IEntity {
 
     constructor(
@@ -28,7 +30,7 @@ export class Entity implements IEntity {
     summon(elementType = 'img') {
         const [newEntity, game] = [document.createElement(elementType), document.getElementById('game')];
         newEntity.id = this.id;
-        newEntity.className = this.className;
+        newEntity.className = this.className + ' ' + Game.device;
         game.appendChild(newEntity);
 
         if (typeof this.imagePath != 'undefined') this.changePath(this.imagePath);

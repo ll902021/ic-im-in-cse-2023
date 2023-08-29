@@ -15,7 +15,10 @@ export class Portal extends DynamicEntity implements IPortal {
     }
 
     action() {
-        document.location.href = this.directLink;
+        this.getElement().style.filter = 'brightness(120%)'
+        setTimeout(() => {
+            document.location.href = this.directLink
+        }, 3000)
     }
 
 }

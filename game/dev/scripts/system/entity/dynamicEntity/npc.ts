@@ -2,7 +2,6 @@ import config from "../../../config.js";
 import _entityList from "../_entityList.js";
 
 import { DynamicEntity } from "./dynamicEntity.js";
-import { Game } from "../../game.js";
 import { TextBox } from "../textBox.js";
 
 export class NPC extends DynamicEntity implements INPC {

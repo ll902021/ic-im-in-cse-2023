@@ -7,6 +7,15 @@ export class Game {
     static initGame() {
         Game.currentBGId = 'BG:Home';
         Game.status = 'walking';
+        Game.device = [
+            /Android/i,
+            /webOS/i,
+            /iPhone/i,
+            /iPad/i,
+            /iPod/i,
+            /BlackBerry/i,
+            /Windows Phone/i
+        ].some(item => navigator.userAgent.match(item)) ? 'Mobile' : 'PC';
         getBGClass(Game.currentBGId).summon();
         getPlayer().summon();
         _entityList.entity.forEach(entity => entity.summon());

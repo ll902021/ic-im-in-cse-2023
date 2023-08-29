@@ -1,3 +1,44 @@
+/* top header */
+header{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100vw;
+    height: 18vh;
+    background-color: #000d1e;
+    /* justify-content: center;
+    align-items: center; */
+    color: #fbf1e5;
+    z-index: 999;
+    display: none;
+}
+.header{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    height: 18vh;
+    width: 54vw;
+    left: 23vw;
+    color: #fbf1e5;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    display: none;
+}
+.title{
+    font-size: 23px;
+    font-family: 'Yuji Boku', serif;
+    z-index: 999;
+    display: none;
+}
+.subtitle{
+    font-size: 10px;
+    font-family: 'Klee One', cursive;
+    z-index: 999;
+    display: none;
+}
+
+/* game */
 #game {
     position: fixed;
     width: 100%;
@@ -27,6 +68,8 @@
     transform: scaleX(1);
     z-index: 20;
     bottom: -50px;
+    left: 0px;
+    border-radius: 100%;
 }
 
 .NPC {
@@ -37,40 +80,69 @@
     background-position: center;
     z-index: 10;
     bottom: 0px;
+    border-radius: 100%;
+}
+
+#NPC1 {
+    left: 20%;
+}
+#NPC2 {
+    left: 45%;
+    width: 100px;
+    height: 100px;
+}
+#NPC3 {
+    left: 70%;
+    width: 100px;
+    height: 100px;
+}
+#NPC4 {
+    left: 30%;
+    width: 100px;
+    height: 100px;
+}
+#NPC5 {
+    left: 65%;
+    width: 100px;
+    height: 100px;
 }
 
 .Portal {
     position: fixed;
-    width: 100px;
+    width: 200px;
     height: 200px;
     background-size: cover;
     background-position: center;
     z-index: 10;
     bottom: 0px;
+    right: 0px;
 }
 
 .ActionButtom {
     position: fixed;
-    width: 50px;
-    height: 50px;
+    width: 200px;
+    height: 200px;
     background-size: cover;
     background-position: center;
     z-index: 30;
+    display: none;
 }
 
+
 #leftArrow {
-    right: 100px;
-    bottom: 0px;
+    right: 250px;
+    bottom: 25px;
 }
 
 #rightArrow {
-    right: 0px;
-    bottom: 0px;
+    right: 25px;
+    bottom: 25px;
 }
 
 #interact {
-    right: 50px;
-    bottom: 150px;
+    left: 25px;
+    bottom: 25px;
+    background-position: center;
 }
 
 .TextBox {
@@ -89,30 +161,123 @@
     z-index: 30;
 }
 
-@media screen and (min-width:768px){
+
+
+/* 手機狀態 */
+@media screen and (min-width: 360px) and (max-width: 767px) {
+    header, .header, .title, .subtitle{
+        display: flex;
+    }
+
+    .title{
+        font-size: 30px;
+    }
+
+    .BG{
+        margin-bottom: 500px;
+    }
+
     .ActionButtom {
-        display:none;
+        display: block;
+    }
+
+    .Player{
+        bottom: 220px;
+    }
+
+    .Portal{
+        bottom: 250px;
+    }
+
+    .TextBox {
+        height: 12%;
+        width: 60%;
+        font-size: 24px;
+    }
+
+    #NPC1.Mobile{
+        bottom: 230px;
+        left: 50%;
+        width: 225px;
+        height: 225px;
+    }
+    #NPC2.Mobile {
+        bottom: 250px;
+        left: 30%;
+    }
+    #NPC3.Mobile {
+        bottom: 250px;
+        left: 60%;
+    }
+    #NPC4.Mobile {
+        bottom: 250px;
+        left: 20%;
+    }
+    #NPC5.Mobile {
+        bottom: 250px;
+        left: 40%;
     }
 }
 
-@media screen and (max-width:640px){
+/* 平板狀態 */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    header, .header, .title, .subtitle{
+        display: flex;
+    }
+
+    .title{
+        font-size: 30px;
+    }
+
+    .BG{
+        margin-bottom: 500px;
+    }
+
+    .ActionButtom {
+        display: block;
+    }
+
+    .Player{
+        bottom: 220px;
+    }
+
+    .Portal{
+        bottom: 250px;
+    }
+
+    .TextBox {
+        height: 12%;
+        width: 60%;
+        font-size: 24px;
+    }
+
+    #NPC1.Mobile{
+        bottom: 230px;
+        left: 50%;
+        width: 225px;
+        height: 225px;
+    }
+    #NPC2.Mobile {
+        bottom: 250px;
+        left: 30%;
+    }
+    #NPC3.Mobile {
+        bottom: 250px;
+        left: 60%;
+    }
+    #NPC4.Mobile {
+        bottom: 250px;
+        left: 20%;
+    }
+    #NPC5.Mobile {
+        bottom: 250px;
+        left: 40%;
+    }
+
+}
+
+/* 電腦狀態 */
+@media screen and (min-width: 1200px) {
     
-    #interact {
-        left: 25px;
-        bottom: 25px;
-    }
 
-    .NPC {
-        width: 70px;
-        height: 70px;
-    }
-
-    .Portal {
-        position: fixed;
-        width: 100px;
-        height: 200px;
-        background-size: cover;
-        background-position: center center;
-        z-index: 10;
-    }
-}
+} 

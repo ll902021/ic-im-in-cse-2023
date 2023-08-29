@@ -4,6 +4,7 @@ import _entityList from "./_entityList.js";
 import { Entity } from "./entity.js";
 import { NPC, getNPC } from "./dynamicEntity/npc.js";
 import { Portal, getPortal } from "./dynamicEntity/portal.js";
+import { Game } from "../game.js";
 
 export class BackGround extends Entity implements IBackGround {
 
@@ -11,9 +12,10 @@ export class BackGround extends Entity implements IBackGround {
         id: string,
         private last: OrNull<string>,
         private next: OrNull<string>,
-        private entityList: string[]
+        private entityList: string[],
+        private device: 'PC' | 'Mobile' = 'PC'
     ) {
-        super(id, 'BG', config.imagePath.backGround[id]);
+        super(id, 'BG', config.imagePath.backGround[device][id]);
     }
 
     getLast() {
@@ -47,5 +49,5 @@ const getEntity = (entityId: string): NPC | Portal => {
 }
 
 export function getBGClass(id: string) {
-    return _entityList.backGround.find(backGround => backGround.getId() == id);
+    return _entityList.backGround[Game.device].find(backGround => backGround.getId() == id);
 }

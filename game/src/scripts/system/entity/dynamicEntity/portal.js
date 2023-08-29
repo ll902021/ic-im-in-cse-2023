@@ -8,7 +8,10 @@ export class Portal extends DynamicEntity {
         this.imagePath = config.imagePath.portal;
     }
     action() {
-        document.location.href = this.directLink;
+        this.getElement().style.filter = 'brightness(120%)';
+        setTimeout(() => {
+            document.location.href = this.directLink;
+        }, 3000);
     }
 }
 export function getPortal(id) {

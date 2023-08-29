@@ -7,7 +7,6 @@ export function eventHandler() {
     window.addEventListener('DOMContentLoaded', () => {
 
         Game.initGame();
-
         [
             movementEvent,
             welcomeMessage
