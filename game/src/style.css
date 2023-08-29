@@ -116,6 +116,7 @@ header{
     z-index: 10;
     bottom: 0px;
     right: 0px;
+    border-radius: 100%;
 }
 
 .ActionButtom {
@@ -217,6 +218,7 @@ header{
         bottom: 250px;
         left: 40%;
     }
+
 }
 
 /* 平板狀態 */
