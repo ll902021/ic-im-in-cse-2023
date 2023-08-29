@@ -10,24 +10,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Yuji+Boku&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Shippori+Mincho:wght@600&family=Yuji+Boku&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <div class="showcase">
         <img src="../webmaterial/bg_computer.png">
         <div id="computer">
-        <form class="form" id="form1">
+        <form action="signup.php" method="post" class="form">
             <div class="leave">
                 <h2>報名表</h2>
                 <button><p><a href="../web_index/webindex.html">×</a></p></button>
             </div>
-            <p>※報名費為 1500 元，現場繳交，含餐費、營服、保險</p>
+            <div class="text">
+                <div class="inside">
+                    <br>
+                    <p>報名已經截止囉！有任何問題都歡迎私訊我們的<a href="https://www.instagram.com/yzu.ic.im.in.cse_2023/"> IG 帳號！</a></p>
+                    <br>
+                    <p>以下幾點再次提醒～</p>
+                    <br>
+                    <b>注意事項</b>
+                    <p>1. 晚會須著制服入場（Dress Code）！</p>
+                    <p>2. 室外活動很多，請做好防曬，並多補充水分</p>
+                    <p>3. 請自備口罩，用餐時須注意防疫規定</p>
+                    <p>4. 報名費為 1500 元，現場繳交，含餐費、營服、保險</p>
+                </div>
+            </div>
+            <!-- <p>※報名費為 1500 元，現場繳交，含餐費、營服、保險。晚會需穿制服。</p>
             <div class="first">
                 <div class="name">
                     <h3>姓名Name:</h3><input type="text" name="name" placeholder="曾X錢" id="name" required />
                 </div>
                 <div class="id">
-                    <h3>學號ID:</h3><input type="text" name="id" placeholder="112XXXX" pattern="(111|112)\d{4}" id="id" maxlength="7" required />
+                    <h3>學號ID:</h3><input type="text" name="id" placeholder="112XXXX" id="id" required />
                 </div>
             </div>
             <div class="first">
@@ -47,7 +60,7 @@
             <div class="second">
                 <div class="idcard">
                     <h3>身分證字號/Residence NO./Passport NO. (保險用)</h3>
-                    <input type="text" name="idcard" placeholder="A123456789" id="idcard" required />
+                    <input type="text" name="idcard" placeholder="A123456789" id="idcard" maxlength="10" required />
                 </div>
             </div>
             <div class="first">
@@ -94,17 +107,36 @@
                     <h3>關係Relationship:</h3><input type="text" name="relation" placeholder="父子" id="relation" required />
                 </div>
             </div>
-            <input type="submit" value="提交Submit" id="submit">
+            <input type="submit" value="提交Submit" id="submit"> -->
         </form>
         </div>
 
         <div id="pphone">
-            <form class="fform" id="form2">
+            <form action="signup.php" method="post" class="fform">
                 <div class="leave">
                     <h2>報名表</h2>
                     <button><p><a href="../web_index/webindex.html">×</a></p></button>
                 </div>
-                <p>※報名費為 1500 元，現場繳交<br>含餐費、營服、保險</p>
+                <div class="text">
+                    <div class="inside">
+                        <br>
+                        <p>報名已經截止囉！</p>
+                        <P>有任何問題都歡迎私訊我們的<a href="https://www.instagram.com/yzu.ic.im.in.cse_2023/"> IG 帳號！</a></p>
+                        <br>
+                        <p>以下幾點再次提醒～</p>
+                        <br>
+                        <b>注意事項</b>
+                        <p>1. 晚會須著制服入場（Dress Code）！</p>
+                        <p>2. 室外活動很多，請做好防曬，並多補充水分</p>
+                        <p>3. 請自備口罩，用餐時須注意防疫規定</p>
+                        <p>4. 報名費為 1500 元，現場繳交，含餐費、營服、保險</p>
+                    </div>
+                </div>
+                <!-- <div class="leave">
+                    <h2>報名表</h2>
+                    <button><p><a href="../web_index/webindex.html">×</a></p></button>
+                </div>
+                <p>※報名費為 1500 元，現場繳交<br>含餐費、營服、保險。晚會需穿制服</p>
                 <div class="ffirst">
                     <div class="nname">
                         <h3>姓名Name:</h3><input type="text" name="name" placeholder="曾X錢" id="nname" required />
@@ -112,7 +144,7 @@
                 </div>
                 <div class="ffirst">
                     <div class="iid">
-                        <h3>學號ID:</h3><input type="text" name="id" placeholder="112XXXX" id="iid" pattern="(111|112)\d{4}"  maxlength="7" required />
+                        <h3>學號ID:</h3><input type="text" name="id" placeholder="112XXXX" id="iid" required />
                     </div>
                 </div>
                 <div class="ffirst">
@@ -180,11 +212,9 @@
                         <h3>關係Relationship:</h3><input type="text" name="relation" placeholder="父子" id="rrelation" required />
                     </div>
                 </div>
-                <input type="submit" value="提交Submit" id="submit">
+                <input type="submit" value="提交Submit" id="submit"> -->
             </form>
         </div>
     </div>
-
-    <script type="module" src='./signup.js'></script>
 </body>
 </html>
