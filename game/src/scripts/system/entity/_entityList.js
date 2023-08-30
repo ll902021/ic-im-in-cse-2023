@@ -19,7 +19,7 @@ export default {
     ],
     player: new Player('player', config.speed.player),
     portal: [
-        new Portal('Portal:exit', "https://ic-im-in-cse-2023.pages.dev/Signup/signup")
+        new Portal('Portal:exit', "https://ic-im-in-cse-2023.pages.dev/web_index/webindex")
     ],
     backGround: {
         // new BackGround(背景Id, 上一個背景的Id(如沒有undefined), 下一個背景的Id(如沒有undefined), [NPC列表]),
